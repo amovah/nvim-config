@@ -67,3 +67,6 @@ luafile ~/.config/nvim/autopairs.lua
 
 " protobuf
 source ~/.config/nvim/proto.vim
+
+" file specific indention
+source ~/.config/nvim/file-specific-indention.vim
