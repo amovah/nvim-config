@@ -79,7 +79,7 @@ Plug 'ellisonleao/glow.nvim'
 " session manager
 Plug 'rmagatti/auto-session'
 
-" prettier
+" neoformat
 Plug 'sbdchd/neoformat'
 
 call plug#end()
