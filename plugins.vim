@@ -76,4 +76,7 @@ Plug 'folke/trouble.nvim'
 " markdown preview
 Plug 'ellisonleao/glow.nvim'
 
+" session manager
+Plug 'rmagatti/auto-session'
+
 call plug#end()

@@ -70,3 +70,6 @@ source ~/.config/nvim/proto.vim
 
 " file specific indention
 source ~/.config/nvim/file-specific-indention.vim
+
+" auto session
+luafile ~/.config/nvim/auto-session.lua
