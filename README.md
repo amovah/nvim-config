@@ -4,17 +4,19 @@ I tried to gather simple neovim config to work with languages and tools I want. 
 
 ## Requirements
 
-- required:
-	* [vim-plug](https://github.com/junegunn/vim-plug)
-	* [lazygit](https://github.com/jesseduffield/lazygit)
-	* [glow](https://github.com/charmbracelet/glow) (I think it will be installed automatically, not tested yet)
-	* [gopls](https://github.com/golang/tools/tree/master/gopls)
-	* [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
+-   required:
 
-- optional:
-	* fzf
-	* [ripgrep](https://github.com/BurntSushi/ripgrep)
-	* [fd](https://github.com/sharkdp/fd)
+    -   [vim-plug](https://github.com/junegunn/vim-plug)
+    -   [lazygit](https://github.com/jesseduffield/lazygit)
+    -   [glow](https://github.com/charmbracelet/glow) (I think it will be installed automatically, not tested yet)
+    -   [gopls](https://github.com/golang/tools/tree/master/gopls)
+    -   [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
+    -   preitter: `npm install -g prettier`. make sure it's available in your $PATH
+
+-   optional:
+    -   fzf
+    -   [ripgrep](https://github.com/BurntSushi/ripgrep)
+    -   [fd](https://github.com/sharkdp/fd)
 
 ## Installation
 
