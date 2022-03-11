@@ -11,7 +11,8 @@ I tried to gather simple neovim config to work with languages and tools I want. 
     -   [glow](https://github.com/charmbracelet/glow) (I think it will be installed automatically, not tested yet)
     -   [gopls](https://github.com/golang/tools/tree/master/gopls)
     -   [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
-    -   preitter: `npm install -g prettier`. make sure it's available in your $PATH
+    -   preitter: `npm install -g prettier`
+    -   tsserver: `npm install -g typescript typescript-language-server`
 
 -   optional:
     -   fzf
