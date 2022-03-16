@@ -85,4 +85,7 @@ Plug 'sbdchd/neoformat'
 " I use for search and find replace
 Plug 'dyng/ctrlsf.vim'
 
+" Multi Select
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 call plug#end()
