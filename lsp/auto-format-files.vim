@@ -2,7 +2,8 @@
 autocmd BufWritePre *.go lua goimports(1000)
 
 " formats powerd by lsp
-autocmd BufWritePre *.go,*.rs,*.js lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.go,*.rs lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.js EslintFixAll
 
 " neoformat for files without LSPs
 augroup formatting 

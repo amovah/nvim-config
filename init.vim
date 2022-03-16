@@ -12,8 +12,8 @@ source ~/.config/nvim/lsp/auto-completion.vim
 " neovim lsp - go
 source ~/.config/nvim/lsp/go-imports.lua
 
-" auto format files
-source ~/.config/nvim/auto-format-files.vim
+" neovim lsp - auto format files
+source ~/.config/nvim/lsp/auto-format-files.vim
 
 " lsp saga
 luafile ~/.config/nvim/lsp-saga.lua
