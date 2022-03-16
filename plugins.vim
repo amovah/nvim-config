@@ -82,4 +82,7 @@ Plug 'rmagatti/auto-session'
 " neoformat
 Plug 'sbdchd/neoformat'
 
+" I use for search and find replace
+Plug 'dyng/ctrlsf.vim'
+
 call plug#end()
