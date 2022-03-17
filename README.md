@@ -13,6 +13,7 @@ I tried to gather simple neovim config to work with languages and tools I want. 
     -   [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
     -   preitter: `npm install -g prettier`
     -   tsserver: `npm install -g typescript typescript-language-server`
+    -   eslint: `npm install -g vscode-langservers-extracted`
 
 -   optional:
     -   fzf
