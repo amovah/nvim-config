@@ -22,4 +22,4 @@ I tried to gather simple neovim config to work with languages and tools I want. 
 
 ## Installation
 
-Please ensure all requirements are instaleld. then copy content of this repo to `~/.config/nvim` or create soft-link to `~/.config/nvim` (preferable) then open up your `nvim` and type `:PlugInstall`. restart your nivm and wait to install treesitter grammers, restart nvim one more time then you are good to code.
+Please ensure all requirements are installed. then copy content of this repo to `~/.config/nvim` or create soft-link to `~/.config/nvim` (preferable) then open up your `nvim` and type `:PlugInstall`. restart your nivm and wait to install treesitter grammers, restart nvim one more time then you are good to code.
