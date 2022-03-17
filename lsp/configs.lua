@@ -91,6 +91,7 @@ local on_attach = function(client, bufnr)
     }
 
     require"lsp_signature".on_attach(cfg, bufnr)
+    require'illuminate'.on_attach(client)
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and

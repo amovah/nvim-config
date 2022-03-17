@@ -98,6 +98,6 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
 " highlight texts
-
+Plug 'RRethy/vim-illuminate'
 
 call plug#end()
