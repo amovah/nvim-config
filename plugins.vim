@@ -36,13 +36,13 @@ Plug 'akinsho/bufferline.nvim'
 
 " theme
 Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim' " disabled due to highlight signature
 Plug 'EdenEast/nightfox.nvim'
 Plug 'ray-x/aurora'
 Plug 'mhartington/oceanic-next'
 Plug 'jacoborus/tender.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'arcticicestudio/nord-vim'
+Plug 'rakr/vim-one'
 
 " buffers
 Plug 'hoob3rt/lualine.nvim'
