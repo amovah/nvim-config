@@ -11,6 +11,9 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+" snippets
+Plug 'rafamadriz/friendly-snippets'
+
 " add icon for autocomplete menu
 Plug 'onsails/lspkind-nvim'
 
@@ -93,5 +96,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " dadbod
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
+
+" highlight texts
+
 
 call plug#end()
