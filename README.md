@@ -39,7 +39,3 @@ Please ensure all requirements are installed. then copy content of this repo to 
 -   **'leader'sd**: Search a word in the project
 -   **'leader'xx**: Trouble menu
 -   **'leader'xw**: Open Workspace diagnostic
--   **loremPara**: Lorem Ipsum
--   **2x2table**: Create a table in markdown
--   **l + TAB + ENTER**: Create a link in markdown
--   **h1..6 + TAB**: Create a heading in markdown
