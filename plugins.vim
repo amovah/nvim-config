@@ -10,6 +10,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 " cmp - sources
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 
 " snippets
 Plug 'rafamadriz/friendly-snippets'
@@ -44,7 +46,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
 
-" buffers
+" status line
 Plug 'hoob3rt/lualine.nvim'
 
 " file explorer
@@ -67,10 +69,6 @@ Plug 'nvim-treesitter/nvim-treesitter' " run :TSUpdate later to update treesitte
 
 " symbol outline - tree of symbols on the right hand of your neovim
 Plug 'simrat39/symbols-outline.nvim'
-
-" hint for neovim commands
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
 
 " which key
 Plug 'folke/which-key.nvim'
