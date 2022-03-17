@@ -73,3 +73,6 @@ source ~/.config/nvim/file-specific-indention.vim
 
 " auto session
 luafile ~/.config/nvim/auto-session.lua
+
+" file specific indention
+source ~/.config/nvim/dadbod.vim

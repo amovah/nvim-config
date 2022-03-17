@@ -88,4 +88,8 @@ Plug 'dyng/ctrlsf.vim'
 " Multi Select
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+" dadbod
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
 call plug#end()
