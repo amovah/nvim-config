@@ -1,6 +1,3 @@
--- luasnip setup
-local luasnip = require 'luasnip'
-
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local lspkind = require('lspkind')
@@ -18,9 +15,9 @@ cmp.setup {
         })
     },
     snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end
+	expand = function(args)
+	    vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+	end,
     },
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -55,7 +52,9 @@ cmp.setup {
     sources = {{
         name = 'nvim_lsp'
     }, {
-        name = 'luasnip'
+        name = 'vsnip'
+    }, {
+	name = 'buffer'
     }}
 }
 

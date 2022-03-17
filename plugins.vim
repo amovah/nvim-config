@@ -6,8 +6,10 @@ Plug 'neovim/nvim-lspconfig'
 " lsp auto complete
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip'
+
+" cmp - sources
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 
 " add icon for autocomplete menu
 Plug 'onsails/lspkind-nvim'
