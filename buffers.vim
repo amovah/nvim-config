@@ -3,9 +3,9 @@ nmap <silent> <Tab> :bn<CR>
 nmap <silent> <S-Tab> :bp<CR>
 
 " Map save to Ctrl + S
-map <c-s> :w<CR>
-imap <c-s> <C-o>:w<CR>
-nnoremap <Leader>s :w<CR>
+" map <c-s> :w<CR>
+" imap <c-s> <C-o>:w<CR>
+" nnoremap <Leader>s :w<CR>
 
 
 " close buffer
