@@ -27,17 +27,19 @@ Please ensure all requirements are installed. then copy content of this repo to 
 ## Shortcuts
 
 -   **-**: Show nvim tree
--   **<leader>p**: Show preview
--   **<leader>o**: Show outline
--   **<leader>gg**: Open lazygit
--   **<leader>?**: Show a list of old files
--   **<leader>sf**: Find a file
--   **<leader>[space]**: Find a file in current buffers
--   **<leader>r**: Refresh nvim tree
--   **<leader>db**: Close all files except active buffer
--   **<leader>sb**: Search a word in current buffer
--   **<leader>sd**: Search a word in the project
--   **<leader>xx**: Trouble menu
--   **<leader>xw**: Open Workspace diagnostic
+-   **'leader'p**: Show preview
+-   **'leader'o**: Show outline
+-   **'leader'gg**: Open lazygit
+-   **'leader'?**: Show a list of old files
+-   **'leader'sf**: Find a file
+-   **'leader'[space]**: Find a file in current buffers
+-   **'leader'r**: Refresh nvim tree
+-   **'leader'db**: Close all files except active buffer
+-   **'leader'sb**: Search a word in current buffer
+-   **'leader'sd**: Search a word in the project
+-   **'leader'xx**: Trouble menu
+-   **'leader'xw**: Open Workspace diagnostic
 -   **loremPara**: Lorem Ipsum
 -   **2x2table**: Create a table in markdown
+-   **l + TAB + ENTER**: Create a link in markdown
+-   **h1..6 + TAB**: Create a heading in markdown
