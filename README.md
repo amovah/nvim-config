@@ -32,8 +32,8 @@ If you want to use `nvim` as `mergetool`, add `.gitconfig` content to yours.
 -   `<leader>p`: Show preview
 -   `<leader>o`: Show outline
 -   `<leader>gg`: Open lazygit
--   `<leader>?`: Show a list of old files
 -   `<leader>sf`: Find a file
+-   `<leader>?`: Show a list of old files
 -   `<leader>[space]`: Find a file in current buffers
 -   `<leader>r`: Refresh nvim tree
 -   `<leader>db`: Close all files except active buffer
@@ -41,6 +41,8 @@ If you want to use `nvim` as `mergetool`, add `.gitconfig` content to yours.
 -   `<leader>sd`: Search a word in the project
 -   `<leader>xx`: Trouble menu
 -   `<leader>xw`: Open Workspace diagnostic
+
+Check plugins section to look for more all hotkey configurations.
 
 ### Which Key?
 
