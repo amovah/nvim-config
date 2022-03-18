@@ -16,6 +16,7 @@ I tried to gather simple neovim config to work with languages and tools I want. 
     -   eslint: `npm install -g vscode-langservers-extracted`
 
 -   optional:
+
     -   [fzf](https://github.com/junegunn/fzf.vim)
     -   [ripgrep](https://github.com/BurntSushi/ripgrep)
     -   [fd](https://github.com/sharkdp/fd) (make sure to fix bin alias)
@@ -26,27 +27,47 @@ Please ensure all requirements are installed. then copy content of this repo to 
 
 If you want to use `nvim` as `mergetool`, add `.gitconfig` content to yours.
 
-## 80% hotkeys:
-
--   `-`: Show nvim tree
--   `<leader>p`: Show preview
--   `<leader>o`: Show outline
--   `<leader>gg`: Open lazygit
--   `<leader>sf`: Find a file
--   `<leader>?`: Show a list of old files
--   `<leader>[space]`: Find a file in current buffers
--   `<leader>r`: Refresh nvim tree
--   `<leader>db`: Close all files except active buffer
--   `<leader>sb`: Search a word in current buffer
--   `<leader>sd`: Search a word in the project
--   `<leader>xx`: Trouble menu
--   `<leader>xw`: Open Workspace diagnostic
-
-Check plugins section to look for more all hotkey configurations.
-
 ### Which Key?
 
 There is which key plugin which helps you to press right key and find your way if you forget one (try `,s` and wait for whichkey to pop out).
+
+### hotkeys:
+
+Check Plugins section and their config file which mentioned in this readme, to check all hotkeys available for you.
+
+**top noteworthy hotkeys:**
+
+-   leader key: `,`
+-   file explorer:
+
+    -   `-`: show nvim tree
+    -   `<leader>sf`: find in file names
+    -   `<leader>sb`: find in current file/buffer
+
+    -   `<leader>sp`: find in all files
+
+-   LSP:
+
+    -   `gD`: go to declaration
+    -   `gd`: go to definition
+    -   `gi`: go to implementation
+    -   `gr`: go to reference
+    -   `go`: line diagnostic
+    -   `gx`: code action
+    -   `gj`: next diagnostic
+    -   `gk`: previous diagnostic
+    -   `<space>d`: go to type definition
+    -   `<space>rn`: rename
+    -   `<leader>xx`: trouble (diagnostic list for project)
+
+-   buffer:
+
+    -   `Tab`,`Shift-Tab`: change between tabs
+    -   `Ctrl-W arrow-key`: switch between windows in one buffer (like outline menu, trouble menu and file tree)
+    -   `<leader>q`: close buffer/window
+    -   `<leader>db`: close all buffer except active one
+
+-   `<leader>gg`: lazygit
 
 ### Plugins
 
