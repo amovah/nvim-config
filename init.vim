@@ -76,3 +76,6 @@ luafile ~/.config/nvim/auto-session.lua
 
 " file specific indention
 source ~/.config/nvim/dadbod.vim
+
+" snippet hotkeys
+source ~/.config/nvim/snippet.vim
