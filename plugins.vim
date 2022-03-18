@@ -99,4 +99,7 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 " highlight texts
 Plug 'RRethy/vim-illuminate'
 
+" section highlight
+Plug 'folke/twilight.nvim'
+
 call plug#end()

@@ -79,3 +79,6 @@ source ~/.config/nvim/dadbod.vim
 
 " snippet hotkeys
 source ~/.config/nvim/snippet.vim
+
+" twilight
+luafile ~/.config/nvim/twilight.lua
