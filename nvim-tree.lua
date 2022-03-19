@@ -17,7 +17,7 @@ require'nvim-tree'.setup {
         auto_open = true
     },
     diagnostics = {
-        enable = false,
+        enable = true,
         icons = {
             hint = "",
             info = "",
@@ -40,7 +40,7 @@ require'nvim-tree'.setup {
     },
     git = {
         enable = true,
-        ignore = true,
+        ignore = false,
         timeout = 500
     },
     view = {
