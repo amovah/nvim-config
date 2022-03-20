@@ -12,7 +12,7 @@ set termguicolors
 set encoding=UTF-8
 
 set number                                                                      "Line numbers are good
-set relativenumber                                                              "Show numbers relative to current line
+" set relativenumber                                                              "Show numbers relative to current line
 set cursorline                                                                  "Highlight current line
 set smartcase                                                                   "Smart case search if there is uppercase
 set ignorecase                                                                  "case insensitive search
