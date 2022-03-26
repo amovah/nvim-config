@@ -9,11 +9,14 @@ I tried to gather simple neovim config to work with languages and tools I want. 
     -   [vim-plug](https://github.com/junegunn/vim-plug)
     -   [lazygit](https://github.com/jesseduffield/lazygit)
     -   [glow](https://github.com/charmbracelet/glow) (I think it will be installed automatically, not tested yet)
-    -   [gopls](https://github.com/golang/tools/tree/master/gopls)
-    -   [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
     -   preitter: `npm install -g prettier`
-    -   tsserver: `npm install -g typescript typescript-language-server`
-    -   eslint: `npm install -g vscode-langservers-extracted`
+
+-   LSPs:
+
+    -   golang: [gopls](https://github.com/golang/tools/tree/master/gopls)
+    -   rust: [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
+    -   js/react/ts: tsserver: `npm install -g typescript typescript-language-server`
+    -   js/react/ys: eslint: `npm install -g vscode-langservers-extracted`
 
 -   optional:
 
