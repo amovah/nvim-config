@@ -12,7 +12,7 @@ set termguicolors
 set encoding=UTF-8
 
 set number                                                                      "Line numbers are good
-" set relativenumber                                                              "Show numbers relative to current line
+set relativenumber                                                              "Show numbers relative to current line
 set cursorline                                                                  "Highlight current line
 set smartcase                                                                   "Smart case search if there is uppercase
 set ignorecase                                                                  "case insensitive search
@@ -51,3 +51,26 @@ set sidescroll=5
 set pyxversion=3                                                                "Always use python 3
 
 set clipboard+=unnamedplus " copy to system clipboard
+
+" remaps
+nnoremap Y y$
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+inoremap , ,<c-g>u
+inoremap , ,<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap [ [<c-g>u
+inoremap ] ]<c-g>u
+inoremap { {<c-g>u
+inoremap } }<c-g>u
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
