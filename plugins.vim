@@ -102,4 +102,7 @@ Plug 'RRethy/vim-illuminate'
 " section highlight
 Plug 'folke/twilight.nvim'
 
+" Split and Join args
+Plug 'AndrewRadev/splitjoin.vim'
+
 call plug#end()
