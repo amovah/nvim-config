@@ -105,4 +105,7 @@ Plug 'folke/twilight.nvim'
 " Split and Join args
 Plug 'AndrewRadev/splitjoin.vim'
 
+" better replace and case transformer
+Plug 'tpope/vim-abolish'
+
 call plug#end()
