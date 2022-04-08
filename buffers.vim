@@ -16,7 +16,3 @@ nnoremap <silent><Leader>Q :bd<CR>
 nnoremap <Leader>db :silent w <BAR> :silent %bd <BAR> e#<CR>
 
 " nnoremap gx :call netrw#BrowseX(expand('<cfile>'), netrw#CheckIfRemote())<CR>
-
-" Indenting in visual mode
-xnoremap <s-tab> <gv
-xnoremap <tab> >gv

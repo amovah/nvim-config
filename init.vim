@@ -1,5 +1,6 @@
 " basic config
 source ~/.config/nvim/basics.vim
+source ~/.config/nvim/remaps.vim
 
 " parser
 source ~/.config/nvim/plugins.vim
