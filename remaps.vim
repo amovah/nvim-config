@@ -1,5 +1,11 @@
 nnoremap Y y$
 
+" fugitive
+nnoremap <leader>gc :Gdiffsplit!<CR>
+nnoremap <leader>gp :diffput //1<CR>
+nnoremap <leader>gtr :diffget //3<CR>
+nnoremap <leader>gtl :diffget //2<CR>
+
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
@@ -23,3 +29,4 @@ nnoremap <leader>k :m .-2<CR>==
 " Indenting in visual mode
 xnoremap <s-tab> <gv
 xnoremap <tab> >gv
+
