@@ -33,6 +33,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " auto bracket closer
 Plug 'windwp/nvim-autopairs'
+Plug 'tpope/vim-surround'
 
 " show buffers
 Plug 'akinsho/bufferline.nvim'
