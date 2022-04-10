@@ -36,3 +36,5 @@ vim.api.nvim_set_keymap('n', '<leader>sw', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>sa', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader>sto', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<leader>slr', [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<leader>sli', [[<cmd>lua require('telescope.builtin').lsp_implementations()<CR>]], opts)
