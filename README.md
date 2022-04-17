@@ -59,7 +59,6 @@ Check Plugins section and their config file which mentioned in this readme, to c
     -   `gx`: code action
     -   `gj`: next diagnostic
     -   `gk`: previous diagnostic
-    -   `<space>d`: go to type definition
     -   `<space>rn`: rename
     -   `<leader>xx`: trouble (diagnostic list for project)
 
@@ -79,6 +78,12 @@ Check Plugins section and their config file which mentioned in this readme, to c
 Basic configs like leader key defination, relative line show number...
 
 Config file: `basics.vim`
+
+#### Remaps
+
+Basic remaps.
+
+Config file: `remaps.vim` **hotkeys**
 
 #### LSP
 
