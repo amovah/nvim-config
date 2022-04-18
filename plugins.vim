@@ -56,7 +56,7 @@ Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
 " comment
-Plug 'numToStr/Comment.nvim'
+Plug 'numToStr/Comment.nvim', { 'commit': '0aaea32f27315e2a99ba4c12ab9def5cbb4842e4' }
 
 " indent
 Plug 'lukas-reineke/indent-blankline.nvim'
