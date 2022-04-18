@@ -3,7 +3,7 @@ nnoremap Y y$
 " fugitive
 nnoremap <leader>gc :Gdiffsplit!<CR>
 nnoremap <leader>gp :diffput //1<CR>
-nnoremap <leader>g0 :diffput<CR>
+nnoremap <leader>g0 :diffget //0<CR>
 nnoremap <leader>gtr :diffget //3<CR>
 nnoremap <leader>gtl :diffget //2<CR>
 
