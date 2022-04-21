@@ -1,5 +1,6 @@
 " golang
-autocmd BufWritePre *.go lua goimports(1000)
+autocmd BufWritePre *.go lua OrgImports(1000)
+autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " formats powerd by lsp
 autocmd BufWritePre *.go,*.rs lua vim.lsp.buf.formatting_sync()
