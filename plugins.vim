@@ -3,6 +3,9 @@ call plug#begin('~/.config/nvim/plugged')
 " nvim lsp
 Plug 'neovim/nvim-lspconfig'
 
+" lsp installer
+Plug 'williamboman/nvim-lsp-installer'
+
 " lsp auto complete
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'

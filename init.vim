@@ -2,8 +2,11 @@
 source ~/.config/nvim/basics.vim
 source ~/.config/nvim/remaps.vim
 
-" parser
+" plugins
 source ~/.config/nvim/plugins.vim
+
+" lsp installer
+luafile ~/.config/nvim/lsp/installer.lua
 
 " neovim lsp
 luafile ~/.config/nvim/lsp/configs.lua
@@ -17,10 +20,11 @@ source ~/.config/nvim/lsp/go-imports.lua
 source ~/.config/nvim/lsp/auto-format-files.vim
 
 " lsp saga
-luafile ~/.config/nvim/lsp-saga.lua
+luafile ~/.config/nvim/lsp/saga.lua
+
 
 " theme
-luafile ~/.config/nvim/theme-config.lua
+luafile ~/.config/nvim/theme.lua
 
 " lua line - status line
 luafile ~/.config/nvim/lualine.lua
