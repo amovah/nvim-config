@@ -8,6 +8,11 @@ require'nvim-tree'.setup {
 		enable = true,
 		show_on_dirs = true,
 	},
+    actions = {
+        change_dir = {
+            restrict_above_cwd = true,
+        },
+    },
 }
 
 vim.api.nvim_command('nnoremap <silent>- :NvimTreeToggle<CR>')
