@@ -12,6 +12,9 @@ require'nvim-tree'.setup {
         change_dir = {
             restrict_above_cwd = true,
         },
+        open_file = {
+            quit_on_open = true,
+        },
     },
 }
 
