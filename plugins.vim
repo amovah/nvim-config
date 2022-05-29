@@ -112,4 +112,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 " better replace and case transformer
 Plug 'tpope/vim-abolish'
 
+" terminal
+Plug 'akinsho/toggleterm.nvim'
+
 call plug#end()

@@ -87,3 +87,6 @@ source ~/.config/nvim/snippet.vim
 
 " twilight
 luafile ~/.config/nvim/twilight.lua
+
+" toggle term
+luafile ~/.config/nvim/toggleterm.lua
