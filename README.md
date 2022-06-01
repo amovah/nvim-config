@@ -4,25 +4,12 @@ I tried to gather simple neovim config to work with languages and tools I want. 
 
 ## Requirements
 
--   required:
-
-    -   [vim-plug](https://github.com/junegunn/vim-plug)
-    -   [lazygit](https://github.com/jesseduffield/lazygit)
-    -   [glow](https://github.com/charmbracelet/glow) (I think it will be installed automatically, not tested yet)
-    -   preitter: `npm install -g prettier`
-
--   LSPs:
-
-    -   golang: [gopls](https://github.com/golang/tools/tree/master/gopls)
-    -   rust: [rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)
-    -   js/react/ts: tsserver: `npm install -g typescript typescript-language-server`
-    -   js/react/ys: eslint: `npm install -g vscode-langservers-extracted`
-
--   optional:
-
-    -   [fzf](https://github.com/junegunn/fzf.vim)
-    -   [ripgrep](https://github.com/BurntSushi/ripgrep)
-    -   [fd](https://github.com/sharkdp/fd) (make sure to fix bin alias)
+-   [vim-plug](https://github.com/junegunn/vim-plug)
+-   [lazygit](https://github.com/jesseduffield/lazygit)
+-   [fzf](https://github.com/junegunn/fzf.vim)
+-   [ripgrep](https://github.com/BurntSushi/ripgrep)
+-   [fd](https://github.com/sharkdp/fd) (make sure to fix bin alias)
+-   preitter: `npm install -g prettier`
 
 ## Installation
 
