@@ -161,9 +161,3 @@ Config file: `theme-config.lua`
 [glow.nvim](https://github.com/ellisonleao/glow.nvim)
 
 Config File: `glow.vim` **hotkeys**
-
-#### Database
-
-[dadbod.vim](https://github.com/tpope/vim-dadbod), [dadbod.vim.ui](https://github.com/kristijanhusak/vim-dadbod-ui). Personally I didn't use this plugin so far.
-
-Config file: `dadbiod.vim` **hotkeys**
