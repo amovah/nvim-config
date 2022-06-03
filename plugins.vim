@@ -115,4 +115,7 @@ Plug 'tpope/vim-abolish'
 " terminal
 Plug 'akinsho/toggleterm.nvim'
 
+" colorize color in terminal in files
+Plug 'norcalli/nvim-colorizer.lua'
+
 call plug#end()

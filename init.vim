@@ -90,3 +90,6 @@ luafile ~/.config/nvim/twilight.lua
 
 " toggle term
 luafile ~/.config/nvim/toggleterm.lua
+
+" colorizer
+luafile ~/.config/nvim/colorizer.lua
