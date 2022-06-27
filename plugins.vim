@@ -114,4 +114,7 @@ Plug 'akinsho/toggleterm.nvim'
 " colorize color in terminal in files
 Plug 'norcalli/nvim-colorizer.lua'
 
+" auto html tag close
+Plug 'windwp/nvim-ts-autotag'
+
 call plug#end()
