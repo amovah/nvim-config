@@ -117,4 +117,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 " auto html tag close
 Plug 'windwp/nvim-ts-autotag'
 
+
+" import cost
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
+
 call plug#end()
