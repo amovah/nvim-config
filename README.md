@@ -10,6 +10,7 @@ I tried to gather simple neovim config to work with languages and tools I want. 
 -   [ripgrep](https://github.com/BurntSushi/ripgrep)
 -   [fd](https://github.com/sharkdp/fd) (make sure to fix bin alias)
 -   preitter: `npm install -g prettier`
+-   yapf: `pip install yapf`
 
 ## Installation
 

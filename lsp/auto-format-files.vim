@@ -15,11 +15,12 @@ augroup formatting
 	autocmd FileType less setlocal formatprg=prettier\ --parser\ less
 	autocmd FileType html setlocal formatprg=prettier\ --parser\ html
 	autocmd FileType json setlocal formatprg=prettier\ --parser\ json\ --tab-width\ 4
+	autocmd FileType python setlocal formatprg=yapf
 augroup END
 
 let g:neoformat_try_formatprg = 1
 
 augroup fmt
 	autocmd!
-	autocmd BufWritePre *.json,*.css,*.scss,*.less,*.md,*.html undojoin | Neoformat
+	autocmd BufWritePre *.json,*.css,*.scss,*.less,*.md,*.html,*.py undojoin | Neoformat
 augroup END
