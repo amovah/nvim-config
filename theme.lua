@@ -14,5 +14,5 @@
 --
 -- vim.api.nvim_command('colorscheme nord')
 --
-vim.api.nvim_command('colorscheme one')
+vim.api.nvim_command('colorscheme duskfox')
 vim.api.nvim_command('set background=dark')

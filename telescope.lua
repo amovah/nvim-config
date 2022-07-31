@@ -29,6 +29,7 @@ vim.api.nvim_set_keymap('n', '<leader>sot', [[<cmd>lua require('telescope.builti
 vim.api.nvim_set_keymap('n', '<leader>sc', [[<cmd>lua require('telescope.builtin').registers()<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader><space>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').find_files({previewer = false})<CR>]], opts)
+vim.api.nvim_set_keymap('n', '<leader>si', [[<cmd>lua require('telescope.builtin').find_files({previewer = false, hidden = true, no_ignore = true})<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader>sh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]], opts)
 vim.api.nvim_set_keymap('n', '<leader>stt', [[<cmd>lua require('telescope.builtin').tags()<CR>]], opts)
