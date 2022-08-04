@@ -50,7 +50,6 @@ Plug 'jacoborus/tender.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
-Plug 'ray-x/starry.nvim'
 
 " status line
 Plug 'hoob3rt/lualine.nvim'
