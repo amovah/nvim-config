@@ -91,13 +91,12 @@ vim.opt.breakindentopt = 'shift:2,min:20'
 vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.colorcolumn = '100'
 vim.opt.foldenable = true
 vim.opt.signcolumn = 'yes'
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = 'niv'
-
-vim.opt.relativenumber = true
 
 if vim.loop.os_uname().sysname == 'Darwin' then
   vim.g.clipboard = {
