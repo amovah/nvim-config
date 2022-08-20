@@ -1,5 +1,5 @@
 local plugin = require('core.pack').register_plugin
--- local lsp_config = require('modules.completion.lsp_config')
+-- require('modules.completion.format')
 
 plugin({
   'neovim/nvim-lspconfig',
@@ -23,10 +23,16 @@ plugin({
 plugin({
   'hrsh7th/nvim-cmp',
   event = 'BufReadPre',
-  -- requires = {
-  --   { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
-  --   { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
-  --   { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' },
-  --   { 'saadparwaiz1/cmp_luasnip', after = 'LuaSnip' },
-  -- },
+  requires = {
+    { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
+    { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
+    { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' },
+    { 'hrsh7th/cmp-vsnip', after = 'nvim-cmp' },
+    { 'hrsh7th/vim-vsnip', after = 'nvim-cmp' },
+    { 'hrsh7th/vim-vsnip-integ', after = 'nvim-cmp' },
+    { 'rafamadriz/friendly-snippets', after = 'nvim-cmp' },
+  },
+  config = function()
+    require('modules.completion.cmp_config')()
+  end
 })
