@@ -9,11 +9,18 @@ function opts:new(instance)
         nowait = false,
         expr = false,
         noremap = false,
+        buffer = false,
       },
     }
   setmetatable(instance, self)
   self.__index = self
   return instance
+end
+
+function keymap.buffer(opt)
+  return function()
+    opt.buffer = true
+  end
 end
 
 function keymap.silent(opt)
