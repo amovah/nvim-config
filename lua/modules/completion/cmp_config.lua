@@ -67,6 +67,12 @@ local cmp_config = function()
     }})
   })
 
+  cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' }
+    }
+  })
 end
 
 return cmp_config

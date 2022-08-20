@@ -1,5 +1,4 @@
 local plugin = require('core.pack').register_plugin
--- require('modules.completion.format')
 
 plugin({
   'neovim/nvim-lspconfig',
