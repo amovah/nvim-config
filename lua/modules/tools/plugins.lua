@@ -17,7 +17,10 @@ plugin({
 
 plugin({
   'lewis6991/gitsigns.nvim',
-  config = function()
-    require('gitsigns').setup({})
-  end
+  config = conf.gitsigns,
+})
+
+plugin({
+  'rmagatti/auto-session',
+  config = conf.auto_session,
 })

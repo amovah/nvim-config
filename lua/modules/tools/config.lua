@@ -22,4 +22,12 @@ function config.telescope()
   require('telescope').load_extension('fzy_native')
 end
 
+function config.gitsigns()
+  require('gitsigns').setup({})
+end
+
+function config.auto_session()
+  require('auto-session').setup({})
+end
+
 return config
