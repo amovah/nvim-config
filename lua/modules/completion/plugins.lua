@@ -1,4 +1,5 @@
 local plugin = require('core.pack').register_plugin
+local conf = require('modules.completion.config')
 
 plugin({
   'neovim/nvim-lspconfig',
@@ -8,8 +9,15 @@ plugin({
   end,
   requires = {
     'RRethy/vim-illuminate',
-    'hrsh7th/cmp-nvim-lsp'
+    'hrsh7th/cmp-nvim-lsp',
+    'ray-x/lsp_signature.nvim'
   }
+})
+
+plugin({
+  'glepnir/lspsaga.nvim',
+  config = conf.lspsaga,
+  after = 'nvim-lspconfig',
 })
 
 plugin({
@@ -23,6 +31,7 @@ plugin({
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   requires = {
+    'onsails/lspkind.nvim',
     { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-lspconfig' },
     { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
     { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },

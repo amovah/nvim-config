@@ -16,6 +16,7 @@ nmap({
   -- noremal remap
   -- close buffer
   { '<C-x>k', cmd('bdelete'), opts(noremap, silent) },
+  { '<C-x>a', cmd('%bd|e#|bd#'), opts(noremap, silent)},
   -- save
   { '<C-s>', cmd('write'), opts(noremap) },
   -- yank
