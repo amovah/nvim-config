@@ -1,3 +1,5 @@
+local utils = require('utils')
+
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = {
     "*.go",
@@ -12,6 +14,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
+
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = {
     '*.js',
@@ -21,6 +24,22 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     '*.mjs',
   },
   callback = function()
+    local files = utils.scandir(vim.fn.getcwd())
+    local has_eslint = false
+    for _, v in pairs(files) do
+      if v == '.eslintrc.js' then
+        has_eslint = true
+        break
+      end
+    end
+
+    if has_eslint then
+      vim.cmd("EslintFixAll")
+    else
+      vim.lsp.buf.formatting_sync()
+      -- or
+      -- vim.cmd("Neoformat")
+    end
   end
 })
 
