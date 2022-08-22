@@ -5,7 +5,6 @@ local silent, noremap = key.silent, key.noremap
 local opts = key.new_opts
 local cmd = key.cmd
 
--- usage of plugins
 nmap({
   -- packer
   { '<Leader>pu', cmd('PackerUpdate'), opts(noremap, silent) },
@@ -32,7 +31,8 @@ nmap({
   -- Telescope
   { '<Leader>fb', cmd([[lua require('telescope.builtin').buffers()]]), opts(noremap, silent) },
   { '<Leader>ff', cmd([[lua require('telescope.builtin').find_files()]]), opts(noremap, silent) },
-  { '<Leader>fi', cmd([[lua require('telescope.builtin').find_files({hidden = true, no_ignore = true})]]), opts(noremap, silent) },
+  { '<Leader>fi', cmd([[lua require('telescope.builtin').find_files({hidden = true, no_ignore = true})]]),
+    opts(noremap, silent) },
   { '<Leader>fa', cmd([[lua require('telescope.builtin').live_grep()]]), opts(noremap, silent) },
   { '<Leader>fw', cmd([[lua require('telescope.builtin').grep_string()]]), opts(noremap, silent) },
   { '<Leader>fc', cmd([[lua require('telescope.builtin').current_buffer_fuzzy_find()]]), opts(noremap, silent) },

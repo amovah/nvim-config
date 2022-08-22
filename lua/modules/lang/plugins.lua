@@ -26,3 +26,8 @@ plugin({
   cmd = { 'Trouble' },
   config = conf.trouble,
 })
+
+plugin({
+  'sbdchd/neoformat',
+  cmd = { 'Neoformat' },
+})
