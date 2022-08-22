@@ -36,3 +36,13 @@ plugin({
   'norcalli/nvim-colorizer.lua',
   config = conf.colorizer,
 })
+
+plugin({
+  'folke/twilight.nvim',
+  config = conf.twilight,
+  cmd = {
+    'Twilight',
+    'TwilightEnable',
+    'TwilightDisable',
+  },
+})

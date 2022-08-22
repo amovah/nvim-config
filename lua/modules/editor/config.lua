@@ -16,4 +16,8 @@ function config.colorizer()
   require('colorizer').setup({})
 end
 
+function config.twilight()
+  require('twilight').setup({})
+end
+
 return config
