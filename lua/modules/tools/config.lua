@@ -30,4 +30,33 @@ function config.auto_session()
   require('auto-session').setup({})
 end
 
+function config.autopairs()
+  require('nvim-autopairs').setup({})
+end
+
+function config.comment()
+  require('Comment').setup({})
+end
+
+function config.indent_blankline()
+  require("indent_blankline").setup({})
+end
+
+function config.colorizer()
+  require('colorizer').setup({})
+end
+
+function config.twilight()
+  require('twilight').setup({})
+end
+
+function config.editorconfig()
+  vim.g.EditorConfig_exclude_patterns = { 'fugitive://.*', 'scp://.*' }
+end
+
+function config.neoclip()
+  require('neoclip').setup({})
+  require("telescope").load_extension("neoclip")
+end
+
 return config

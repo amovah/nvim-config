@@ -30,3 +30,98 @@ plugin({
   'rmagatti/auto-session',
   config = conf.auto_session,
 })
+
+plugin({
+  'windwp/nvim-autopairs',
+  config = conf.autopairs
+})
+
+plugin({
+  'tpope/vim-surround',
+})
+
+plugin({
+  'numToStr/Comment.nvim',
+  keys = { 'g' },
+  config = conf.comment,
+})
+
+plugin({
+  'lukas-reineke/indent-blankline.nvim',
+  config = conf.indent_blankline,
+})
+
+plugin({
+  'AndrewRadev/splitjoin.vim',
+})
+
+plugin({
+  'tpope/vim-abolish',
+})
+
+plugin({
+  'mg979/vim-visual-multi',
+  keys = {
+    "<Ctrl>",
+    "<M>",
+    "<C-n>",
+    "<C-n>",
+    "<M-n>",
+    "<S-Down>",
+    "<S-Up>",
+    "<M-Left>",
+    "<M-i>",
+    "<M-Right>",
+    "<M-D>",
+    "<M-Down>",
+    "<C-d>",
+    "<C-Down>",
+    "<S-Right>",
+    "<C-LeftMouse>",
+    "<M-LeftMouse>",
+    "<M-C-RightMouse>",
+    "<Leader>",
+  },
+  opt = true,
+})
+
+plugin({
+  'norcalli/nvim-colorizer.lua',
+  config = conf.colorizer,
+})
+
+plugin({
+  'folke/twilight.nvim',
+  config = conf.twilight,
+  opt = true,
+  cmd = {
+    'Twilight',
+    'TwilightEnable',
+    'TwilightDisable',
+  },
+})
+
+plugin({
+  'editorconfig/editorconfig-vim',
+  config = conf.editorconfig
+})
+
+plugin({
+  'wellle/targets.vim',
+})
+
+plugin({
+  "iamcco/markdown-preview.nvim",
+  run = "cd app && npm install",
+  setup = function()
+    vim.g.mkdp_filetypes = { "markdown" }
+  end,
+  ft = { "markdown" },
+  cmd = { "MarkdownPreview" },
+})
+
+plugin({
+  "AckslD/nvim-neoclip.lua",
+  after = { 'telescope.nvim' },
+  config = conf.neoclip,
+})
