@@ -42,6 +42,7 @@ plugin({
 
 plugin({
   'numToStr/Comment.nvim',
+  opt = true,
   keys = { 'g' },
   config = conf.comment,
 })
@@ -53,6 +54,8 @@ plugin({
 
 plugin({
   'AndrewRadev/splitjoin.vim',
+  opt = true,
+  keys = { 'gS', 'gJ' }
 })
 
 plugin({
