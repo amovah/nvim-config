@@ -25,3 +25,8 @@ plugin({
   requires = 'kyazdani42/nvim-web-devicons',
   after = 'nvim-lspconfig',
 })
+
+plugin({
+  'folke/which-key.nvim',
+  config = conf.which_key
+})

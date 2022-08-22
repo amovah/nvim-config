@@ -1,5 +1,11 @@
 vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = { "*.go" },
+  pattern = {
+    "*.go",
+    "*.rs",
+    "*.sol",
+    "*.vim",
+    "*.tf",
+  },
   callback = function()
     vim.lsp.buf.formatting_sync()
   end,

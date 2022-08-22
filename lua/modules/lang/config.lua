@@ -23,4 +23,12 @@ function config.nvim_treesitter()
   })
 end
 
+function config.symbols_outline()
+  require('symbols-outline').setup({})
+end
+
+function config.trouble()
+  require('trouble').setup({})
+end
+
 return config

@@ -10,3 +10,14 @@ plugin({
     'nvim-telescope/telescope-fzy-native.nvim',
   },
 })
+
+plugin({
+  'tpope/vim-fugitive',
+})
+
+plugin({
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup({})
+  end
+})

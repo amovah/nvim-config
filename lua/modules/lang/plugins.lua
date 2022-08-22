@@ -10,3 +10,19 @@ plugin({
 })
 
 plugin({ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' })
+
+plugin({
+  'simrat39/symbols-outline.nvim',
+  cmd = {
+    'SymbolsOutline',
+    'SymbolsOutlineClose',
+    'SymbolsOutlineOpen'
+  },
+  config = conf.symbols_outline,
+})
+
+plugin({
+  'folke/trouble.nvim',
+  cmd = { 'Trouble' },
+  config = conf.trouble,
+})

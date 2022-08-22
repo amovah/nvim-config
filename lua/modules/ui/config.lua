@@ -19,9 +19,9 @@ function config.dashboard()
   db.custom_center = {
     {
       icon = '  ',
-      desc = 'Update Plugins                          ',
-      shortcut = 'SPC p u',
-      action = 'PackerUpdate',
+      desc = 'Sync Plugins                            ',
+      shortcut = 'SPC p s',
+      action = 'PackerSync',
     },
     {
       icon = '  ',
@@ -64,6 +64,10 @@ function config.nvim_tree()
     hijack_cursor = true,
     hijack_netrw = true,
   })
+end
+
+function config.which_key()
+  require('which-key').setup({})
 end
 
 return config
