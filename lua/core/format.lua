@@ -36,10 +36,25 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     if has_eslint then
       vim.cmd("EslintFixAll")
     else
-      vim.lsp.buf.formatting_sync()
+      -- vim.lsp.buf.formatting_sync()
       -- or
-      -- vim.cmd("Neoformat")
+      vim.cmd("Neoformat")
     end
+  end
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = {
+    '*.json',
+    '*.css',
+    '*.scss',
+    '*.less',
+    '*.md',
+    '*.html',
+    '*.py',
+  },
+  callback = function()
+    vim.cmd("Neoformat")
   end
 })
 
