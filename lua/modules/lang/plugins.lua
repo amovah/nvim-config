@@ -12,10 +12,14 @@ plugin({
   },
 })
 
-plugin({ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' })
+plugin({
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  after = 'nvim-treesitter',
+})
 
 plugin({
   'simrat39/symbols-outline.nvim',
+  opt = true,
   cmd = {
     'SymbolsOutline',
     'SymbolsOutlineClose',
@@ -26,11 +30,13 @@ plugin({
 
 plugin({
   'folke/trouble.nvim',
+  opt = true,
   cmd = { 'Trouble' },
   config = conf.trouble,
 })
 
 plugin({
   'sbdchd/neoformat',
+  opt = true,
   cmd = { 'Neoformat' },
 })

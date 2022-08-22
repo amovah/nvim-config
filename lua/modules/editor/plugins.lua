@@ -40,9 +40,15 @@ plugin({
 plugin({
   'folke/twilight.nvim',
   config = conf.twilight,
+  opt = true,
   cmd = {
     'Twilight',
     'TwilightEnable',
     'TwilightDisable',
   },
+})
+
+plugin({
+  'editorconfig/editorconfig-vim',
+  config = conf.editorconfig
 })

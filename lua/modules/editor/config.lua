@@ -20,4 +20,8 @@ function config.twilight()
   require('twilight').setup({})
 end
 
+function config.editorconfig()
+  vim.g.EditorConfig_exclude_patterns = { 'fugitive://.*', 'scp://.*' }
+end
+
 return config
