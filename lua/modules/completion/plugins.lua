@@ -21,8 +21,9 @@ plugin({
 
 plugin({
   'hrsh7th/nvim-cmp',
-  event = 'BufReadPre',
+  event = 'InsertEnter',
   requires = {
+    { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-lspconfig' },
     { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
     { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
     { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' },
@@ -33,5 +34,5 @@ plugin({
   },
   config = function()
     require('modules.completion.cmp_config')()
-  end
+  end,
 })
