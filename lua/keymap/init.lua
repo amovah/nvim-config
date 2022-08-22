@@ -52,4 +52,6 @@ nmap({
   { '<Leader>xl', cmd('Trouble loclist'), opts(noremap, silent) },
   { '<Leader>xq', cmd('Trouble quickfix'), opts(noremap, silent) },
   -- { 'gr', cmd('Trouble lsp_references'), opts(noremap, silent) },
+  -- Lazygit
+  { '<Leader>gg', cmd('LazyGit'), opts(noremap, silent) },
 })

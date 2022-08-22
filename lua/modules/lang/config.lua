@@ -20,6 +20,9 @@ function config.nvim_treesitter()
         },
       },
     },
+    autotag = {
+      enable = true,
+    },
   })
 end
 

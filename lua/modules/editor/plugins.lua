@@ -31,3 +31,8 @@ plugin({
 plugin({
   'mg979/vim-visual-multi',
 })
+
+plugin({
+  'norcalli/nvim-colorizer.lua',
+  config = conf.colorizer,
+})
