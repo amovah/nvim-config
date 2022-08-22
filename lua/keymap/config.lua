@@ -15,22 +15,23 @@ xmap({ ' ', '', opts(noremap) })
 nmap({
   -- noremal remap
   -- close buffer
-  { '<C-x>k', cmd('bdelete'), opts(noremap, silent) },
-  { '<C-x>a', cmd('%bd|e#|bd#'), opts(noremap, silent)},
+  { '<Leader>bq', cmd('bdelete'), opts(noremap, silent) },
+  { '<Leader>ba', cmd('%bd|e#|bd#'), opts(noremap, silent)},
   -- save
   { '<C-s>', cmd('write'), opts(noremap) },
   -- yank
   { 'Y', 'y$', opts(noremap) },
-  -- buffer jump
-  { ']b', cmd('bn'), opts(noremap) },
-  { '[b', cmd('bp'), opts(noremap) },
   -- remove trailing white space
-  { '<Leader>t', cmd('TrimTrailingWhitespace'), opts(noremap) },
+  -- { '<Leader>t', cmd('TrimTrailingWhitespace'), opts(noremap) },
   -- window jump
   { '<C-h>', '<C-w>h', opts(noremap) },
   { '<C-l>', '<C-w>l', opts(noremap) },
   { '<C-j>', '<C-w>j', opts(noremap) },
   { '<C-k>', '<C-w>k', opts(noremap) },
+  -- better maps
+  { 'n', 'nzzzv', opts(noremap) },
+  { 'N', 'Nzzzv', opts(noremap) },
+  { 'J', 'mzJ`z', opts(noremap) },
 })
 
 imap({
@@ -41,3 +42,8 @@ imap({
 
 -- commandline remap
 cmap({ '<C-b>', '<Left>', opts(noremap) })
+
+xmap({
+  { '<s-tab>', '<gv' },
+  { '<tab>', '>gv' },
+})
