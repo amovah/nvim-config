@@ -25,7 +25,10 @@ function config.nvim_treesitter()
 		},
 		rainbow = {
 			enable = true,
-		}
+		},
+		matchup = {
+			enable = true,
+		},
 	})
 end
 

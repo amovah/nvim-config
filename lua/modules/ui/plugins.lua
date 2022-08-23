@@ -1,9 +1,16 @@
 local plugin = require('core.pack').register_plugin
 local conf = require('modules.ui.config')
 
-plugin({ 'glepnir/zephyr-nvim', config = conf.zephyr })
+-- themes
+plugin({
+	'glepnir/zephyr-nvim',
+	config = conf.zephyr,
+})
 
-plugin({ 'glepnir/dashboard-nvim', config = conf.dashboard })
+plugin({
+	'glepnir/dashboard-nvim',
+	config = conf.dashboard,
+})
 
 plugin({
 	'glepnir/galaxyline.nvim',
@@ -28,5 +35,5 @@ plugin({
 
 plugin({
 	'folke/which-key.nvim',
-	config = conf.which_key
+	config = conf.which_key,
 })

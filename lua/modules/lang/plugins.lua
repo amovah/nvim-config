@@ -11,6 +11,7 @@ plugin({
 		{ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' },
 		{ 'windwp/nvim-ts-autotag', after = 'nvim-treesitter' },
 		{ 'p00f/nvim-ts-rainbow', after = 'nvim-treesitter' },
+		{ 'andymass/vim-matchup', after = 'nvim-treesitter' },
 	},
 })
 
