@@ -63,4 +63,8 @@ function config.true_zen()
 	require('true-zen').setup({})
 end
 
+function config.hop()
+	require("hop").setup({ keys = "adghklqwertyuiopzxcvbnmfjADHKLWERTYUIOPZXCVBNMFJ1234567890" })
+end
+
 return config

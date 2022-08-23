@@ -141,3 +141,31 @@ plugin({
 	opt = true,
 	cmd = 'UndoTreeToggle',
 })
+
+-- TODO: key mapping is missing, should add
+plugin({
+	'phaazon/hop.nvim',
+	opt = true,
+	cmd = {
+		"HopWord",
+		"HopWordMW",
+		"HopWordAC",
+		"HopWordBC",
+		"HopLine",
+		"HopChar1",
+		"HopChar1MW",
+		"HopChar1AC",
+		"HopChar1BC",
+		"HopChar2",
+		"HopChar2MW",
+		"HopChar2AC",
+		"HopChar2BC",
+		"HopPattern",
+		"HopPatternAC",
+		"HopPatternBC",
+		"HopChar1CurrentLineAC",
+		"HopChar1CurrentLineBC",
+		"HopChar1CurrentLine",
+	},
+	config = conf.hop,
+})
