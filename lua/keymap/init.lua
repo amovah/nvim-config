@@ -42,6 +42,7 @@ nmap({
 	{ '<Leader>fsa', cmd([[lua require('telescope.builtin').lsp_dynamic_workspace_symbols()]]), opts(noremap, silent) },
 	{ '<Leader>fst', cmd([[lua require('telescope.builtin').treesitter()]]), opts(noremap, silent) },
 	{ '<Leader>fr', cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
+	{ '<Leader>fp', cmd('Telescope neoclip'), opts(noremap, silent) },
 	-- Buffer
 	{ ']b', cmd('BufferLineCycleNext'), opts(noremap, silent) },
 	{ '[b', cmd('BufferLineCyclePrev'), opts(noremap, silent) },
@@ -55,10 +56,14 @@ nmap({
 	-- { 'gr', cmd('Trouble lsp_references'), opts(noremap, silent) },
 	-- Lazygit
 	{ '<Leader>gg', cmd('LazyGit'), opts(noremap, silent) },
+	-- refactoring
+	{ '<Leader>rp', cmd([[lua require('refactoring').debug.printf({below = false})]]), opts(noremap, silent) },
+	{ '<Leader>rv', cmd([[lua require('refactoring').debug.print_var({ normal = true })]]), opts(noremap, silent) },
+	{ '<Leader>rc', cmd([[lua require('refactoring').debug.cleanup({})]]), opts(noremap, silent) },
 })
 
 vmap({
-	'<leader>rr',
-	cmd([[lua require('refactoring').select_refactor()]]),
-	opts(noremap, silent),
+	-- refactoring
+	{ '<leader>rr', cmd([[lua require('refactoring').select_refactor()]]), opts(noremap, silent) },
+	{ '<leader>rv', cmd([[lua require('refactoring').debug.print_var({})]]), opts(noremap, silent) },
 })
