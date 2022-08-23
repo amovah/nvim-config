@@ -59,4 +59,8 @@ function config.neoclip()
 	require("telescope").load_extension("neoclip")
 end
 
+function config.true_zen()
+	require('true-zen').setup({})
+end
+
 return config

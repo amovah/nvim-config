@@ -128,3 +128,10 @@ plugin({
 	after = { 'telescope.nvim' },
 	config = conf.neoclip,
 })
+
+plugin({
+	'Pocco81/true-zen.nvim',
+	opt = true,
+	cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" },
+	config = conf.true_zen,
+})
