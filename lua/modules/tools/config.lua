@@ -27,7 +27,9 @@ function config.gitsigns()
 end
 
 function config.auto_session()
-	require('auto-session').setup({})
+	require('auto-session').setup({
+		bypass_session_save_file_types = { 'dashboard' }
+	})
 end
 
 function config.autopairs()
