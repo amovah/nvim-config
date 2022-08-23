@@ -135,3 +135,9 @@ plugin({
 	cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" },
 	config = conf.true_zen,
 })
+
+plugin({
+	'mbbill/undotree',
+	opt = true,
+	cmd = 'UndoTreeToggle',
+})
