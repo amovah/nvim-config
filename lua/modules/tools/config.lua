@@ -71,4 +71,8 @@ function config.rest()
 	require('rest-nvim').setup({})
 end
 
+function config.git_conflict()
+	require('git-conflict').setup({})
+end
+
 return config

@@ -178,3 +178,16 @@ plugin({
 	config = conf.rest,
 	requires = { "nvim-lua/plenary.nvim" },
 })
+
+plugin({
+	'akinsho/git-conflict.nvim',
+	cmd = {
+		"GitConflictListQf",
+		"GitConflictChooseOurs",
+		"GitConflictChooseTheirs",
+		"GitConflictChooseBoth",
+		"GitConflictNextConflict",
+	},
+	opt = true,
+	config = conf.git_conflict,
+})
