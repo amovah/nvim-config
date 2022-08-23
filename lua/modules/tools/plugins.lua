@@ -2,129 +2,129 @@ local plugin = require('core.pack').register_plugin
 local conf = require('modules.tools.config')
 
 plugin({
-  'nvim-telescope/telescope.nvim',
-  config = conf.telescope,
-  requires = {
-    'nvim-lua/popup.nvim',
-    'nvim-lua/plenary.nvim',
-    'nvim-telescope/telescope-fzy-native.nvim',
-  },
+	'nvim-telescope/telescope.nvim',
+	config = conf.telescope,
+	requires = {
+		'nvim-lua/popup.nvim',
+		'nvim-lua/plenary.nvim',
+		'nvim-telescope/telescope-fzy-native.nvim',
+	},
 })
 
 plugin({
-  'tpope/vim-fugitive',
+	'tpope/vim-fugitive',
 })
 
 plugin({
-  'kdheepak/lazygit.nvim',
-  opt = true,
-  cmd = { 'LazyGit' }
+	'kdheepak/lazygit.nvim',
+	opt = true,
+	cmd = { 'LazyGit' }
 })
 
 plugin({
-  'lewis6991/gitsigns.nvim',
-  config = conf.gitsigns,
+	'lewis6991/gitsigns.nvim',
+	config = conf.gitsigns,
 })
 
 plugin({
-  'rmagatti/auto-session',
-  config = conf.auto_session,
+	'rmagatti/auto-session',
+	config = conf.auto_session,
 })
 
 plugin({
-  'windwp/nvim-autopairs',
-  config = conf.autopairs
+	'windwp/nvim-autopairs',
+	config = conf.autopairs
 })
 
 plugin({
-  'tpope/vim-surround',
+	'tpope/vim-surround',
 })
 
 plugin({
-  'numToStr/Comment.nvim',
-  opt = true,
-  keys = { 'g' },
-  config = conf.comment,
+	'numToStr/Comment.nvim',
+	opt = true,
+	keys = { 'g' },
+	config = conf.comment,
 })
 
 plugin({
-  'lukas-reineke/indent-blankline.nvim',
-  config = conf.indent_blankline,
+	'lukas-reineke/indent-blankline.nvim',
+	config = conf.indent_blankline,
 })
 
 plugin({
-  'AndrewRadev/splitjoin.vim',
-  opt = true,
-  keys = { 'gS', 'gJ' }
+	'AndrewRadev/splitjoin.vim',
+	opt = true,
+	keys = { 'gS', 'gJ' }
 })
 
 plugin({
-  'tpope/vim-abolish',
+	'tpope/vim-abolish',
 })
 
 plugin({
-  'mg979/vim-visual-multi',
-  keys = {
-    "<Ctrl>",
-    "<M>",
-    "<C-n>",
-    "<C-n>",
-    "<M-n>",
-    "<S-Down>",
-    "<S-Up>",
-    "<M-Left>",
-    "<M-i>",
-    "<M-Right>",
-    "<M-D>",
-    "<M-Down>",
-    "<C-d>",
-    "<C-Down>",
-    "<S-Right>",
-    "<C-LeftMouse>",
-    "<M-LeftMouse>",
-    "<M-C-RightMouse>",
-    "<Leader>",
-  },
-  opt = true,
+	'mg979/vim-visual-multi',
+	keys = {
+		"<Ctrl>",
+		"<M>",
+		"<C-n>",
+		"<C-n>",
+		"<M-n>",
+		"<S-Down>",
+		"<S-Up>",
+		"<M-Left>",
+		"<M-i>",
+		"<M-Right>",
+		"<M-D>",
+		"<M-Down>",
+		"<C-d>",
+		"<C-Down>",
+		"<S-Right>",
+		"<C-LeftMouse>",
+		"<M-LeftMouse>",
+		"<M-C-RightMouse>",
+		"<Leader>",
+	},
+	opt = true,
 })
 
 plugin({
-  'norcalli/nvim-colorizer.lua',
-  config = conf.colorizer,
+	'norcalli/nvim-colorizer.lua',
+	config = conf.colorizer,
 })
 
 plugin({
-  'folke/twilight.nvim',
-  config = conf.twilight,
-  opt = true,
-  cmd = {
-    'Twilight',
-    'TwilightEnable',
-    'TwilightDisable',
-  },
+	'folke/twilight.nvim',
+	config = conf.twilight,
+	opt = true,
+	cmd = {
+		'Twilight',
+		'TwilightEnable',
+		'TwilightDisable',
+	},
 })
 
 plugin({
-  'editorconfig/editorconfig-vim',
-  config = conf.editorconfig
+	'editorconfig/editorconfig-vim',
+	config = conf.editorconfig
 })
 
 plugin({
-  'wellle/targets.vim',
+	'wellle/targets.vim',
 })
 
 plugin({
-  "iamcco/markdown-preview.nvim",
-  run = "cd app && npm install",
-  setup = function()
-    vim.g.mkdp_filetypes = { "markdown" }
-  end,
-  ft = { "markdown" },
-  cmd = { "MarkdownPreview" },
+	"iamcco/markdown-preview.nvim",
+	run = "cd app && npm install",
+	setup = function()
+		vim.g.mkdp_filetypes = { "markdown" }
+	end,
+	ft = { "markdown" },
+	cmd = { "MarkdownPreview" },
 })
 
 plugin({
-  "AckslD/nvim-neoclip.lua",
-  after = { 'telescope.nvim' },
-  config = conf.neoclip,
+	"AckslD/nvim-neoclip.lua",
+	after = { 'telescope.nvim' },
+	config = conf.neoclip,
 })

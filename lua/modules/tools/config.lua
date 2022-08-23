@@ -1,62 +1,62 @@
 local config = {}
 
 function config.telescope()
-  require('telescope').setup({
-    defaults = {
-      layout_config = {
-        horizontal = { prompt_position = 'top', results_width = 0.6 },
-        vertical = { mirror = false },
-      },
-      sorting_strategy = 'ascending',
-      file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-      grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-      qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
-    },
-    extensions = {
-      fzy_native = {
-        override_generic_sorter = false,
-        override_file_sorter = true,
-      },
-    },
-  })
-  require('telescope').load_extension('fzy_native')
+	require('telescope').setup({
+		defaults = {
+			layout_config = {
+				horizontal = { prompt_position = 'top', results_width = 0.6 },
+				vertical = { mirror = false },
+			},
+			sorting_strategy = 'ascending',
+			file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+			grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+			qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+		},
+		extensions = {
+			fzy_native = {
+				override_generic_sorter = false,
+				override_file_sorter = true,
+			},
+		},
+	})
+	require('telescope').load_extension('fzy_native')
 end
 
 function config.gitsigns()
-  require('gitsigns').setup({})
+	require('gitsigns').setup({})
 end
 
 function config.auto_session()
-  require('auto-session').setup({})
+	require('auto-session').setup({})
 end
 
 function config.autopairs()
-  require('nvim-autopairs').setup({})
+	require('nvim-autopairs').setup({})
 end
 
 function config.comment()
-  require('Comment').setup({})
+	require('Comment').setup({})
 end
 
 function config.indent_blankline()
-  require("indent_blankline").setup({})
+	require("indent_blankline").setup({})
 end
 
 function config.colorizer()
-  require('colorizer').setup({})
+	require('colorizer').setup({})
 end
 
 function config.twilight()
-  require('twilight').setup({})
+	require('twilight').setup({})
 end
 
 function config.editorconfig()
-  vim.g.EditorConfig_exclude_patterns = { 'fugitive://.*', 'scp://.*' }
+	vim.g.EditorConfig_exclude_patterns = { 'fugitive://.*', 'scp://.*' }
 end
 
 function config.neoclip()
-  require('neoclip').setup({})
-  require("telescope").load_extension("neoclip")
+	require('neoclip').setup({})
+	require("telescope").load_extension("neoclip")
 end
 
 return config

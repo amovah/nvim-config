@@ -5,29 +5,29 @@ local cache_dir = home .. '/.cache/nvim/'
 
 -- Create cache dir and subs dir
 local createdir = function()
-  local data_dir = {
-    cache_dir .. 'backup',
-    cache_dir .. 'session',
-    cache_dir .. 'swap',
-    cache_dir .. 'tags',
-    cache_dir .. 'undo',
-  }
-  -- There only check once that If cache_dir exists
-  -- Then I don't want to check subs dir exists
-  if vim.fn.isdirectory(cache_dir) == 0 then
-    os.execute('mkdir -p ' .. cache_dir)
-    for _, v in pairs(data_dir) do
-      if vim.fn.isdirectory(v) == 0 then
-        os.execute('mkdir -p ' .. v)
-      end
-    end
-  else
-    for _, v in pairs(data_dir) do
-      if vim.fn.isdirectory(v) == 0 then
-        os.execute('mkdir -p ' .. v)
-      end
-    end
-  end
+	local data_dir = {
+		cache_dir .. 'backup',
+		cache_dir .. 'session',
+		cache_dir .. 'swap',
+		cache_dir .. 'tags',
+		cache_dir .. 'undo',
+	}
+	-- There only check once that If cache_dir exists
+	-- Then I don't want to check subs dir exists
+	if vim.fn.isdirectory(cache_dir) == 0 then
+		os.execute('mkdir -p ' .. cache_dir)
+		for _, v in pairs(data_dir) do
+			if vim.fn.isdirectory(v) == 0 then
+				os.execute('mkdir -p ' .. v)
+			end
+		end
+	else
+		for _, v in pairs(data_dir) do
+			if vim.fn.isdirectory(v) == 0 then
+				os.execute('mkdir -p ' .. v)
+			end
+		end
+	end
 end
 
 createdir()
