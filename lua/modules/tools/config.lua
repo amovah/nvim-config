@@ -67,4 +67,8 @@ function config.hop()
 	require("hop").setup({ keys = "adghklqwertyuiopzxcvbnmfjADHKLWERTYUIOPZXCVBNMFJ1234567890" })
 end
 
+function config.rest()
+	require('rest-nvim').setup({})
+end
+
 return config

@@ -139,7 +139,7 @@ plugin({
 plugin({
 	'mbbill/undotree',
 	opt = true,
-	cmd = 'UndoTreeToggle',
+	cmd = 'UndotreeToggle',
 })
 
 -- TODO: key mapping is missing, should add
@@ -168,4 +168,13 @@ plugin({
 		"HopChar1CurrentLine",
 	},
 	config = conf.hop,
+})
+
+-- TODO: key mapping is missing, should add
+plugin({
+	'NTBBloodbath/rest.nvim',
+	opt = true,
+	ft = { 'http' },
+	config = conf.rest,
+	requires = { "nvim-lua/plenary.nvim" },
 })
