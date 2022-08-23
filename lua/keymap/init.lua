@@ -30,8 +30,6 @@ nmap({
 	{ 'gR', cmd('Lspsaga rename'), opts(noremap, silent) },
 	{ 'gh', cmd('Lspsaga lsp_finder'), opts(noremap, silent) },
 	{ 'go', cmd('Lspsaga show_line_diagnostics'), opts(noremap, silent) },
-	-- Refactoring
-	-- { '<Leader>rr', cmd([[lua require('refactoring').refactor('Extract Function')]]), opts(noremap, silent) },
 	-- Telescope
 	{ '<Leader>fb', cmd([[lua require('telescope.builtin').buffers()]]), opts(noremap, silent) },
 	{ '<Leader>ff', cmd([[lua require('telescope.builtin').find_files()]]), opts(noremap, silent) },
