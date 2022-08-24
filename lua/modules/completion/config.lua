@@ -9,4 +9,8 @@ function config.lspsaga()
 	})
 end
 
+function config.mason()
+	require('mason').setup({})
+end
+
 return config

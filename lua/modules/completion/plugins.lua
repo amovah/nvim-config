@@ -22,9 +22,7 @@ plugin({
 
 plugin({
 	'williamboman/mason.nvim',
-	config = function()
-		require("mason").setup()
-	end,
+	config = conf.mason,
 })
 
 plugin({
