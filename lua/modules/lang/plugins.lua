@@ -31,6 +31,13 @@ plugin({
 })
 
 plugin({
+	'kevinhwang91/nvim-ufo',
+	after = 'nvim-treesitter',
+	requires = { "kevinhwang91/promise-async" },
+	config = conf.ufo,
+})
+
+plugin({
 	'simrat39/symbols-outline.nvim',
 	opt = true,
 	cmd = {

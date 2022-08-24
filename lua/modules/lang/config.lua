@@ -49,4 +49,12 @@ function config.trouble()
 	require('trouble').setup({})
 end
 
+function config.ufo()
+	require('ufo').setup({
+		provider_selector = function(bufnr, filetype, buftype)
+			return { 'treesitter', 'indent' }
+		end
+	})
+end
+
 return config
