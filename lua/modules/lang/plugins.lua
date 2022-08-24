@@ -10,7 +10,9 @@ plugin({
 	requires = {
 		{ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' },
 		{ 'windwp/nvim-ts-autotag', after = 'nvim-treesitter' },
-		{ 'p00f/nvim-ts-rainbow', after = 'nvim-treesitter' },
+		-- disabled due to conflict with matchup and it doesn't provide any
+		-- highlighting (not my personal prefer)
+		-- { 'p00f/nvim-ts-rainbow', after = 'nvim-treesitter' },
 		{ 'andymass/vim-matchup', after = 'nvim-treesitter' },
 	},
 })
@@ -23,7 +25,7 @@ plugin({
 
 plugin({
 	'ThePrimeagen/refactoring.nvim',
-	-- opt = true,
+	opt = true,
 	config = conf.refactoring,
 	after = { 'nvim-treesitter' }
 })
