@@ -45,7 +45,6 @@ end
 function config.nvim_bufferline()
 	require('bufferline').setup({
 		options = {
-			separator_style = 'thick',
 			modified_icon = '✥',
 			buffer_close_icon = '',
 			offsets = {
