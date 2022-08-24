@@ -12,9 +12,16 @@ local lsp_config = function()
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 	local lspconfig = require('lspconfig')
-	local common_lspconfig = {
+	local server_config = {
 		on_attach = on_attach,
 		capabilities = capabilities,
+		settings = {
+			Lua = {
+				diagnostics = {
+					globals = { 'vim' }
+				}
+			}
+		}
 	}
 
 	local lsp_servers = {
@@ -30,24 +37,13 @@ local lsp_config = function()
 		'tailwindcss',
 		'terraformls',
 		'vimls',
+		'sumneko_lua',
+		'yapf',
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
-		lspconfig[lsp].setup(common_lspconfig)
+		lspconfig[lsp].setup(server_config)
 	end
-
-	lspconfig['sumneko_lua'].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-		settings = {
-			Lua = {
-				diagnostics = {
-					globals = { 'vim' }
-				}
-			}
-		}
-	})
-
 end
 
 return lsp_config

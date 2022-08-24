@@ -26,6 +26,12 @@ plugin({
 })
 
 plugin({
+	'williamboman/mason-lspconfig.nvim',
+	after = 'mason.nvim',
+	config = conf.mason_lspconfig,
+})
+
+plugin({
 	'hrsh7th/nvim-cmp',
 	requires = {
 		'onsails/lspkind.nvim',
