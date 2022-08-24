@@ -45,8 +45,8 @@ nmap({
 	{ '<Leader>fr', cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ '<Leader>fp', cmd('Telescope neoclip'), opts(noremap, silent) },
 	-- Buffer
-	{ ']b', cmd('BufferLineCycleNext'), opts(noremap, silent) },
-	{ '[b', cmd('BufferLineCyclePrev'), opts(noremap, silent) },
+	{ '<Tab>', cmd('BufferLineCycleNext'), opts(noremap, silent) },
+	{ '<S-Tab>', cmd('BufferLineCyclePrev'), opts(noremap, silent) },
 	{ '<Leader>bs', cmd('BufferLineSortByDirectory'), opts(noremap, silent) },
 	-- Trouble
 	{ '<Leader>xx', cmd('Trouble'), opts(noremap, silent) },

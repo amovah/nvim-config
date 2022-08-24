@@ -38,7 +38,6 @@ local lsp_config = function()
 		'terraformls',
 		'vimls',
 		'sumneko_lua',
-		'yapf',
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
