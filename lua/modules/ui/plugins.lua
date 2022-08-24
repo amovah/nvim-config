@@ -58,7 +58,9 @@ local themes = {
 }
 plugin({
 	'glepnir/zephyr-nvim',
-	config = conf.zephyr,
+	config = function()
+		require('modules.ui.config').zephyr()
+	end,
 })
 for _, theme in pairs(themes) do
 	plugin({

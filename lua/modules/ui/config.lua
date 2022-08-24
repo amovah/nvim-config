@@ -1,7 +1,16 @@
+local utils = require('utils')
 local config = {}
 
 function config.zephyr()
-	vim.cmd('colorscheme zephyr')
+	local theme_path = vim.fn.stdpath('data') .. '/theme'
+	if utils.file_exists(theme_path) then
+		local theme = utils.lines_from(theme_path)
+		for _, value in pairs(theme) do
+			vim.cmd('colorscheme ' .. value)
+		end
+	else
+		vim.cmd('colorscheme zephyr')
+	end
 end
 
 function config.galaxyline()
