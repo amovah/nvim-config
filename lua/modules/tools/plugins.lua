@@ -191,3 +191,10 @@ plugin({
 	opt = true,
 	config = conf.git_conflict,
 })
+
+plugin({
+	'ggandor/leap.nvim',
+	opt = true,
+	keys = { 's', 'S' },
+	config = conf.leap,
+})

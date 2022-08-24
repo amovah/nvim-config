@@ -77,4 +77,8 @@ function config.git_conflict()
 	require('git-conflict').setup({})
 end
 
+function config.leap()
+	require('leap').set_default_keymaps()
+end
+
 return config
