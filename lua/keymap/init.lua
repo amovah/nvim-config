@@ -61,6 +61,8 @@ nmap({
 	{ '<Leader>rp', cmd([[lua require('refactoring').debug.printf({below = false})]]), opts(noremap, silent) },
 	{ '<Leader>rv', cmd([[lua require('refactoring').debug.print_var({ normal = true })]]), opts(noremap, silent) },
 	{ '<Leader>rc', cmd([[lua require('refactoring').debug.cleanup({})]]), opts(noremap, silent) },
+	-- clear highlighted search
+	{ '<C-l>', cmd('noh'), opts(noremap, silent) }
 })
 
 vmap({
