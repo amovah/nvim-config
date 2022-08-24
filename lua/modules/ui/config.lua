@@ -36,9 +36,17 @@ end
 function config.nvim_bufferline()
 	require('bufferline').setup({
 		options = {
+			separator_style = 'thick',
 			modified_icon = '✥',
 			buffer_close_icon = '',
-			always_show_bufferline = false,
+			offsets = {
+				{
+					filetype = "NvimTree",
+					text = "File Explorer",
+					highlight = "Directory",
+					text_align = "left",
+				}
+			},
 			diagnostics = "nvim_lsp",
 			diagnostics_indicator = function(count, level, diagnostics_dict, context)
 				local has_error = false
