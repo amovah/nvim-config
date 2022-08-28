@@ -67,6 +67,7 @@ vim.opt.pumheight = 15
 vim.opt.helpheight = 12
 vim.opt.previewheight = 12
 vim.opt.showcmd = false
+
 -- just for nightly
 -- vim.opt.cmdheight = 2
 -- vim.opt.cmdwinheight = 5
@@ -97,6 +98,7 @@ vim.opt.foldenable = true
 vim.opt.signcolumn = 'yes'
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = 'niv'
+vim.opt.cursorline = true
 
 if vim.loop.os_uname().sysname == 'Darwin' then
 	vim.g.clipboard = {
