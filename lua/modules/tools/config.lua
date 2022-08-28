@@ -30,7 +30,8 @@ end
 
 function config.auto_session()
 	require('auto-session').setup({
-		bypass_session_save_file_types = { 'dashboard' }
+		bypass_session_save_file_types = { 'dashboard' },
+		log_level = 'error',
 	})
 end
 
