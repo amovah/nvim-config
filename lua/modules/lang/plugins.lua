@@ -60,3 +60,9 @@ plugin({
 	opt = true,
 	cmd = { 'Neoformat' },
 })
+
+plugin({
+	'buoto/gotests-vim',
+	opt = true,
+	cmd = { 'GoTests', 'GoTestsAll' }
+})
