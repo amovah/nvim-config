@@ -8,6 +8,7 @@ plugin({
 		'nvim-lua/popup.nvim',
 		'nvim-lua/plenary.nvim',
 		'nvim-telescope/telescope-fzy-native.nvim',
+		'ThePrimeagen/harpoon',
 	},
 })
 

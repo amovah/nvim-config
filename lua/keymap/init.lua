@@ -45,8 +45,8 @@ nmap({
 	{ '<Leader>fr', cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ '<Leader>fp', cmd('Telescope neoclip'), opts(noremap, silent) },
 	-- Buffer
-	{ '<Tab>', cmd('BufferLineCycleNext'), opts(noremap, silent) },
-	{ '<S-Tab>', cmd('BufferLineCyclePrev'), opts(noremap, silent) },
+	{ ']b', cmd('BufferLineCycleNext'), opts(noremap, silent) },
+	{ '[b', cmd('BufferLineCyclePrev'), opts(noremap, silent) },
 	{ '<Leader>bs', cmd('BufferLineSortByDirectory'), opts(noremap, silent) },
 	-- Trouble
 	{ '<Leader>xx', cmd('Trouble'), opts(noremap, silent) },
@@ -62,7 +62,12 @@ nmap({
 	{ '<Leader>rv', cmd([[lua require('refactoring').debug.print_var({ normal = true })]]), opts(noremap, silent) },
 	{ '<Leader>rc', cmd([[lua require('refactoring').debug.cleanup({})]]), opts(noremap, silent) },
 	-- clear highlighted search
-	{ '<C-l>', cmd('noh'), opts(noremap, silent) }
+	{ '<C-l>', cmd('noh'), opts(noremap, silent) },
+	-- harpoon
+	{ '<Leader>hh', cmd([[lua require("harpoon.ui").toggle_quick_menu()]]), opts(noremap, silent) },
+	{ '<Leader>ha', cmd([[lua require("harpoon.mark").add_file()]]), opts(noremap, silent) },
+	{ '<Tab>', cmd([[lua require("harpoon.ui").nav_next()]]), opts(noremap, silent) },
+	{ '<S-Tab>', cmd([[lua require("harpoon.ui").nav_prev()]]), opts(noremap, silent) },
 })
 
 vmap({
