@@ -44,6 +44,7 @@ nmap({
 	{ '<Leader>fst', cmd([[lua require('telescope.builtin').treesitter()]]), opts(noremap, silent) },
 	{ '<Leader>fr', cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ '<Leader>fe', cmd([[lua require('telescope.builtin').diagnostics()]]), opts(noremap, silent) },
+	{ '<Leader>ft', cmd([[Telescope]]), opts(noremap, silent) },
 	{ '<Leader>fp', cmd('Telescope neoclip'), opts(noremap, silent) },
 	-- Buffer
 	{ ']b', cmd('BufferLineCycleNext'), opts(noremap, silent) },
