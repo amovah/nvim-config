@@ -1,1 +1,1 @@
-followed up gelpnier cosynvim structure and some customization
+my custom nvim config. inspired by cosynvim by gelpnier.
