@@ -154,6 +154,7 @@ local function setup_theme()
           "minimal",
           "minimal-base16",
           "adwaita",
+          "zephyr",
         }
       end
     }
