@@ -82,8 +82,9 @@ vim.opt.showcmd = false
 vim.opt.undofile = true
 vim.opt.synmaxcol = 2500
 vim.opt.formatoptions = '1jcroql'
-vim.opt.textwidth = 80
-vim.opt.expandtab = false
+-- I don't like this option maybe turn on later
+-- vim.opt.textwidth = 120
+vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -93,7 +94,7 @@ vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = '100'
+vim.opt.colorcolumn = 120
 vim.opt.foldenable = true
 vim.opt.signcolumn = 'yes'
 vim.opt.conceallevel = 2
@@ -101,18 +102,18 @@ vim.opt.concealcursor = 'niv'
 vim.opt.cursorline = true
 
 if vim.loop.os_uname().sysname == 'Darwin' then
-	vim.g.clipboard = {
-		name = 'macOS-clipboard',
-		copy = {
-			['+'] = 'pbcopy',
-			['*'] = 'pbcopy',
-		},
-		paste = {
-			['+'] = 'pbpaste',
-			['*'] = 'pbpaste',
-		},
-		cache_enabled = 0,
-	}
-	vim.g.python_host_prog = '/usr/bin/python'
-	vim.g.python3_host_prog = '/usr/local/bin/python3'
+  vim.g.clipboard = {
+    name = 'macOS-clipboard',
+    copy = {
+      ['+'] = 'pbcopy',
+      ['*'] = 'pbcopy',
+    },
+    paste = {
+      ['+'] = 'pbpaste',
+      ['*'] = 'pbpaste',
+    },
+    cache_enabled = 0,
+  }
+  vim.g.python_host_prog = '/usr/bin/python'
+  vim.g.python3_host_prog = '/usr/local/bin/python3'
 end
