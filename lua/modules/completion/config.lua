@@ -35,4 +35,8 @@ function config.mason_lspconfig()
   })
 end
 
+function config.fidget()
+  require('fidget').setup({})
+end
+
 return config
