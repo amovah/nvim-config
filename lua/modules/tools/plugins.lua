@@ -9,6 +9,7 @@ plugin({
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-fzy-native.nvim',
     'ThePrimeagen/harpoon',
+    'nvim-telescope/telescope-file-browser.nvim',
   },
 })
 

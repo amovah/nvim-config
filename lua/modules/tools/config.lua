@@ -21,7 +21,8 @@ function config.telescope()
   })
 
   require('telescope').load_extension('fzy_native')
-  require("telescope").load_extension('harpoon')
+  require('telescope').load_extension('harpoon')
+  require('telescope').load_extension('file_browser')
 end
 
 function config.gitsigns()
