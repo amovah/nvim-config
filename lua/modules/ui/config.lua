@@ -74,4 +74,8 @@ function config.which_key()
   require('which-key').setup({})
 end
 
+function config.indent_blankline()
+  require("indent_blankline").setup({})
+end
+
 return config

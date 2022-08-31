@@ -49,11 +49,6 @@ plugin({
 })
 
 plugin({
-  'lukas-reineke/indent-blankline.nvim',
-  config = conf.indent_blankline,
-})
-
-plugin({
   'AndrewRadev/splitjoin.vim',
   opt = true,
   keys = { 'gS', 'gJ' }
