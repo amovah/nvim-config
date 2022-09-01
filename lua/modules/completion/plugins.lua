@@ -4,13 +4,21 @@ local conf = require('modules.completion.config')
 plugin({
   'neovim/nvim-lspconfig',
   config = function()
-    require('modules.completion.lsp_config')()
+    require('modules.completion.lsp_config').lsp_config()
   end,
   requires = {
     'RRethy/vim-illuminate',
     'hrsh7th/cmp-nvim-lsp',
     'ray-x/lsp_signature.nvim'
   }
+})
+
+plugin({
+  'jose-elias-alvarez/null-ls.nvim',
+  after = 'nvim-lspconfig',
+  config = function()
+    require('modules.completion.lsp_config').null_ls()
+  end,
 })
 
 plugin({
