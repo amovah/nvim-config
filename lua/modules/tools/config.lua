@@ -77,4 +77,8 @@ function config.leap()
   require('leap').set_default_keymaps()
 end
 
+function config.dadbod()
+  vim.g.db_ui_save_location = string.format('%s/dadbod_ui', vim.fn.stdpath('data'))
+end
+
 return config

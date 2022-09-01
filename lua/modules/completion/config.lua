@@ -20,7 +20,6 @@ function config.mason_lspconfig()
       "rust_analyzer",
       "tsserver",
       "eslint",
-      "sqls",
       "dockerls",
       "cssls",
       "jedi_language_server",

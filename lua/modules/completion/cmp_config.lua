@@ -2,7 +2,7 @@ local cmp_config = function()
   local cmp = require('cmp')
   local lspkind = require('lspkind')
 
-  cmp.setup {
+  cmp.setup({
     preselect = cmp.PreselectMode.Item,
     window = {
       completion = cmp.config.window.bordered(),
@@ -64,7 +64,7 @@ local cmp_config = function()
     }, {
       name = "path"
     } }
-  }
+  })
 
   cmp.setup.cmdline(':', {
     sources = cmp.config.sources({ {
@@ -80,6 +80,22 @@ local cmp_config = function()
       { name = 'buffer' }
     }
   })
+
+  vim.api.nvim_create_autocmd(
+    'FileType',
+    {
+      pattern = { 'sql' },
+      callback = function()
+        cmp.setup.buffer({
+          sources = {
+            {
+              name = 'vim-dadbod-completion',
+            }
+          }
+        })
+      end
+    }
+  )
 end
 
 return cmp_config

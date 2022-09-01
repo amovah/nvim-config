@@ -81,7 +81,6 @@ function M.lsp_config()
     "gopls",
     "rust_analyzer",
     "tsserver",
-    "sqls",
     "dockerls",
     "cssls",
     "jedi_language_server",

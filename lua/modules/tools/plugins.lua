@@ -167,3 +167,13 @@ plugin({
   keys = { 's', 'S' },
   config = conf.leap,
 })
+
+plugin({
+  'tpope/vim-dadbod',
+  requires = {
+    'kristijanhusak/vim-dadbod-ui',
+  },
+  config = conf.dadbod,
+  opt = true,
+  cmd = { 'DBUIToggle' },
+})
