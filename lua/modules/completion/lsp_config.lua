@@ -1,5 +1,3 @@
-local util = require('vim.lsp.util')
-
 local M = {}
 
 local org_imports = function(wait_ms)

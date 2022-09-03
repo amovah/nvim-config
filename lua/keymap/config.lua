@@ -32,6 +32,8 @@ nmap({
   { 'n', 'nzzzv', opts(noremap) },
   { 'N', 'Nzzzv', opts(noremap) },
   { 'J', 'mzJ`z', opts(noremap) },
+  { '<C-d>', '<C-d>zz', opts(noremap) },
+  { '<C-u>', '<C-u>zz', opts(noremap) },
 })
 
 imap({
@@ -46,4 +48,6 @@ cmap({ '<C-b>', '<Left>', opts(noremap) })
 xmap({
   { '<s-tab>', '<gv' },
   { '<tab>', '>gv' },
+  { '<C-d>', '<C-d>zz' },
+  { '<C-u>', '<C-u>zz' },
 })
