@@ -19,7 +19,6 @@ function config.mason_lspconfig()
       "gopls",
       "rust_analyzer",
       "tsserver",
-      "eslint",
       "dockerls",
       "cssls",
       "jedi_language_server",
