@@ -56,7 +56,8 @@ plugin({
 })
 
 plugin({
-  'buoto/gotests-vim',
+  'yanskun/gotests.nvim',
   opt = true,
-  cmd = { 'GoTests', 'GoTestsAll' }
+  cmd = { 'GoTests', 'GoTestsAll' },
+  config = conf.gotests,
 })

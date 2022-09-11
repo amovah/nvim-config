@@ -57,4 +57,8 @@ function config.ufo()
   })
 end
 
+function config.gotests()
+  require('gotests').setup()
+end
+
 return config
