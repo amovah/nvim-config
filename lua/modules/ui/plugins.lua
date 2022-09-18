@@ -67,7 +67,7 @@ plugin({
 
 plugin({
 	"kyazdani42/nvim-tree.lua",
-	cmd = "NvimTreeToggle",
+	cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
 	config = conf.nvim_tree,
 	requires = "kyazdani42/nvim-web-devicons",
 })

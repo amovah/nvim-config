@@ -17,7 +17,8 @@ nmap({
 	{ "<Leader>ss", cmd("SessionSave"), opts(noremap, silent) },
 	{ "<Leader>sl", cmd("SessionLoad"), opts(noremap, silent) },
 	-- nvimtree
-	{ "<Leader>e", cmd("NvimTreeToggle"), opts(noremap, silent) },
+	{ "<Leader>ee", cmd("NvimTreeToggle"), opts(noremap, silent) },
+	{ "<Leader>eh", cmd("NvimTreeFindFileToggle"), opts(noremap, silent) },
 	-- LSP
 	{ "gd", vim.lsp.buf.definition, opts(noremap, silent) },
 	-- { 'gd', cmd('Lspsaga preview_definition'), opts(noremap, silent) },
@@ -48,14 +49,25 @@ nmap({
 	{ "<Leader>fr", cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ "<Leader>fd", cmd([[lua require('telescope.builtin').diagnostics()]]), opts(noremap, silent) },
 	{
-		"<Leader>fe",
+		"<Leader>fee",
 		function()
 			require("telescope").extensions.file_browser.file_browser({})
 		end,
 		opts(noremap, silent),
 	},
+	{
+		"<Leader>feh",
+		function()
+			require("telescope").extensions.file_browser.file_browser({
+				path = vim.fn.expand("%:p:h"),
+				cwd = vim.loop.cwd(),
+			})
+		end,
+		opts(noremap, silent),
+	},
 	{ "<Leader>ft", cmd([[Telescope]]), opts(noremap, silent) },
 	{ "<Leader>fp", cmd("Telescope neoclip"), opts(noremap, silent) },
+	{ "<Leader>fh", cmd([[lua require('telescope.builtin').help_tags()]]), opts(noremap, silent) },
 	-- Buffer
 	{ "]b", cmd("BufferLineCycleNext"), opts(noremap, silent) },
 	{ "[b", cmd("BufferLineCyclePrev"), opts(noremap, silent) },
