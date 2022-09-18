@@ -72,7 +72,7 @@ local function setup_theme()
 	end, {
 		nargs = 1,
 		complete = function(ArgLead, CmdLine, CursorPos)
-			return {
+			local themes = {
 				"neon_default",
 				"neon_doom",
 				"neon_dark",
@@ -153,6 +153,15 @@ local function setup_theme()
 				"adwaita",
 				"zephyr",
 			}
+
+			local result = {}
+			for _, value in ipairs(themes) do
+				if utils.string_start_with(value, ArgLead) then
+					table.insert(result, value)
+				end
+			end
+
+			return result
 		end,
 	})
 end
