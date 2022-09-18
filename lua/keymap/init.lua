@@ -79,8 +79,10 @@ nmap({
 	{ "<Leader>xl", cmd("Trouble loclist"), opts(noremap, silent) },
 	{ "<Leader>xq", cmd("Trouble quickfix"), opts(noremap, silent) },
 	-- { 'gr', cmd('Trouble lsp_references'), opts(noremap, silent) },
-	-- Lazygit
-	{ "<Leader>gg", cmd("LazyGit"), opts(noremap, silent) },
+	-- git
+	{ "<Leader>gg", cmd("Git"), opts(noremap, silent) },
+	{ "<Leader>gP", cmd("Git push"), opts(noremap, silent) },
+	{ "<Leader>gp", cmd("Git pull"), opts(noremap, silent) },
 	-- refactoring
 	{ "<Leader>rp", cmd([[lua require('refactoring').debug.printf({below = false})]]), opts(noremap, silent) },
 	{ "<Leader>rv", cmd([[lua require('refactoring').debug.print_var({ normal = true })]]), opts(noremap, silent) },

@@ -18,12 +18,6 @@ plugin({
 })
 
 plugin({
-	"kdheepak/lazygit.nvim",
-	opt = true,
-	cmd = { "LazyGit" },
-})
-
-plugin({
 	"lewis6991/gitsigns.nvim",
 	config = conf.gitsigns,
 })
