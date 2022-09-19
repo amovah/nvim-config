@@ -96,8 +96,8 @@ vim.opt.relativenumber = true
 vim.opt.colorcolumn = "100"
 vim.opt.foldenable = true
 vim.opt.signcolumn = "yes"
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = "niv"
+-- vim.opt.conceallevel = 2
+-- vim.opt.concealcursor = "niv"
 vim.opt.cursorline = true
 
 if vim.loop.os_uname().sysname == "Darwin" then
