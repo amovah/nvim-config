@@ -171,3 +171,9 @@ plugin({
 	opt = true,
 	cmd = { "DBUIToggle" },
 })
+
+plugin({
+	"kdheepak/lazygit.nvim",
+	opt = true,
+	cmd = { "LazyGit" },
+})
