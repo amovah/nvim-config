@@ -12,10 +12,6 @@ nmap({
 	{ "<Leader>pi", cmd("PackerInstall"), opts(noremap, silent) },
 	{ "<Leader>pc", cmd("PackerCompile"), opts(noremap, silent) },
 	{ "<Leader>ps", cmd("PackerSync"), opts(noremap, silent) },
-	-- dashboard
-	{ "<Leader>n", cmd("DashboardNewFile"), opts(noremap, silent) },
-	{ "<Leader>ss", cmd("SessionSave"), opts(noremap, silent) },
-	{ "<Leader>sl", cmd("SessionLoad"), opts(noremap, silent) },
 	-- nvimtree
 	{ "<Leader>ee", cmd("NvimTreeToggle"), opts(noremap, silent) },
 	{ "<Leader>eh", cmd("NvimTreeFindFileToggle"), opts(noremap, silent) },
