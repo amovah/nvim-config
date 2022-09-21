@@ -80,7 +80,7 @@ nmap({
 	{ "<Leader>gP", cmd("Git push"), opts(noremap, silent) },
 	{ "<Leader>gp", cmd("Git pull"), opts(noremap, silent) },
 	{ "<Leader>gl", cmd("LazyGit"), opts(noremap, silent) },
-	{ "<Leader>gdd", cmd("Gvdiffsplit"), opts(noremap, silent) },
+	{ "<Leader>gdd", cmd("Gvdiffsplit!"), opts(noremap, silent) },
 	{ "<Leader>gdl", cmd("diffget //2"), opts(noremap, silent) },
 	{ "<Leader>gdr", cmd("diffget //3"), opts(noremap, silent) },
 	-- refactoring
