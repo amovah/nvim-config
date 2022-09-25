@@ -177,3 +177,13 @@ plugin({
 	opt = true,
 	cmd = { "LazyGit" },
 })
+
+plugin({
+	"~/.config/nvim/lua/updater",
+	requires = {
+		"nvim-lua/plenary.nvim",
+		"rcarriga/nvim-notify",
+	},
+	config = conf.updater,
+	event = "BufWritePre",
+})

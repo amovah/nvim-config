@@ -81,4 +81,8 @@ function config.dadbod()
 	vim.g.db_ui_save_location = string.format("%s/dadbod_ui", vim.fn.stdpath("data"))
 end
 
+function config.updater()
+	require("updater").setup()
+end
+
 return config
