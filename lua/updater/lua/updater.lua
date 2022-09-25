@@ -8,6 +8,15 @@ function M.setup()
 	Job:new({
 		command = "git",
 		args = {
+			"fetch",
+			"--all",
+		},
+		cwd = vim.fn.stdpath("config"),
+	}):sync()
+
+	Job:new({
+		command = "git",
+		args = {
 			"rev-parse",
 			"origin/master",
 		},
