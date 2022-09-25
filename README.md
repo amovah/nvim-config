@@ -13,3 +13,7 @@ I've struggled so much with changing a theme which I had to open up config chang
 ## Customization
 
 Customization is possbile by editing `lua/config_local.lua` file which is already gitignored. All changes except managing plugins are possible.
+
+## Update Notifier
+
+if you clone it as git repo, you can get a notification when new update comes out.
