@@ -45,6 +45,16 @@ local function apply_theme_config(theme)
 	elseif scheme == "catppuccin" then
 		vim.g.catppuccin_flavour = variant
 		require("catppuccin").setup()
+	elseif scheme == "onedarkpro" or scheme == "onedarkpro_onedark" then
+		scheme = "onedarkpro"
+		if variant == "vivid" then
+			variant = "onedark_vivid"
+		elseif variant == "dark" then
+			variant = "onedark_dark"
+		end
+		require("onedarkpro").setup({
+			dark_theme = variant,
+		})
 	end
 
 	vim.cmd("colorscheme " .. scheme)
@@ -152,6 +162,9 @@ local function setup_theme()
 				"minimal-base16",
 				"adwaita",
 				"zephyr",
+				"onedarkpro_onedark",
+				"onedarkpro_onedark_vivid",
+				"onedarkpro_onedark_dark",
 			}
 
 			local result = {}
