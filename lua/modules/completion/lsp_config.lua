@@ -17,20 +17,18 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local on_attach = function(client, bufnr)
-	-- disable tsserver formatting for neovim v0.7
-	-- for newer versions it should use filter option on lsp.format
-	if client.name == "tsserver" or client.name == "sumneko_lua" then
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.document_range_formatting = false
-	end
-
 	if client.server_capabilities.documentFormattingProvider then
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			group = augroup,
 			buffer = bufnr,
 			callback = function()
-				vim.lsp.buf.formatting_sync()
+				vim.lsp.buf.format({
+					filter = function(client)
+						return client.name ~= "tsserver" and client.name ~= "sumneko_lua"
+					end,
+					bufnr = bufnr,
+				})
 			end,
 		})
 
