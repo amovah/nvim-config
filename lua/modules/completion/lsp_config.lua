@@ -87,6 +87,7 @@ function M.lsp_config()
 		"sumneko_lua",
 		"yamlls",
 		"bashls",
+    "sourcekit",
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
@@ -103,6 +104,7 @@ function M.null_ls()
 			null_ls.builtins.formatting.eslint_d,
 			null_ls.builtins.formatting.yapf,
 			null_ls.builtins.formatting.stylua,
+      null_ls.builtins.formatting.swiftformat,
 		},
 		on_attach = on_attach,
 	})
