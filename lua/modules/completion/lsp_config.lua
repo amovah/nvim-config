@@ -74,7 +74,6 @@ function M.lsp_config()
 	}
 
 	local lsp_servers = {
-		"gopls",
 		"rust_analyzer",
 		"tsserver",
 		"dockerls",
@@ -87,8 +86,19 @@ function M.lsp_config()
 		"sumneko_lua",
 		"yamlls",
 		"bashls",
-    "sourcekit",
+		"sourcekit",
 	}
+
+	lspconfig.gopls.setup({
+		cmd = { "gopls", "serve" },
+		filetypes = { "go", "gomod" },
+		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+		settings = {
+			gopls = {
+				buildFlags = { "-tags=wireinject" },
+			},
+		},
+	})
 
 	for _, lsp in ipairs(lsp_servers) do
 		lspconfig[lsp].setup(server_config)
@@ -104,7 +114,7 @@ function M.null_ls()
 			null_ls.builtins.formatting.eslint_d,
 			null_ls.builtins.formatting.yapf,
 			null_ls.builtins.formatting.stylua,
-      null_ls.builtins.formatting.swiftformat,
+			null_ls.builtins.formatting.swiftformat,
 		},
 		on_attach = on_attach,
 	})
