@@ -53,6 +53,15 @@ local on_attach = function(client, bufnr)
 end
 
 function M.lsp_config()
+	local nlspsettings = require("nlspsettings")
+	nlspsettings.setup({
+		config_home = vim.fn.stdpath("config") .. "/nlsp-settings",
+		local_settings_dir = ".nlsp-settings",
+		local_settings_root_markers_fallback = { ".git" },
+		append_default_schemas = true,
+		loader = "json",
+	})
+
 	local lspconfig = require("lspconfig")
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -87,22 +96,21 @@ function M.lsp_config()
 		"yamlls",
 		"bashls",
 		"sourcekit",
+		"jsonls",
 	}
+
+	for _, lsp in ipairs(lsp_servers) do
+		lspconfig[lsp].setup(server_config)
+	end
 
 	lspconfig.gopls.setup({
 		cmd = { "gopls", "serve" },
 		filetypes = { "go", "gomod" },
 		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 		settings = {
-			gopls = {
-				buildFlags = { "-tags=wireinject" },
-			},
+			gopls = {},
 		},
 	})
-
-	for _, lsp in ipairs(lsp_servers) do
-		lspconfig[lsp].setup(server_config)
-	end
 end
 
 function M.null_ls()

@@ -14,6 +14,14 @@ plugin({
 })
 
 plugin({
+	"tamago324/nlsp-settings.nvim",
+	config = conf.nlsp,
+	requires = {
+		"neovim/nvim-lspconfig",
+	},
+})
+
+plugin({
 	"jose-elias-alvarez/null-ls.nvim",
 	after = "nvim-lspconfig",
 	config = function()
