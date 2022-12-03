@@ -5,7 +5,6 @@ plugin({
 	"nvim-telescope/telescope.nvim",
 	config = conf.telescope,
 	requires = {
-		"nvim-lua/popup.nvim",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-fzy-native.nvim",
 		"ThePrimeagen/harpoon",
