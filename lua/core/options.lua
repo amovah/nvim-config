@@ -70,6 +70,8 @@ opt.colorcolumn = "100"
 -- opt.conceallevel = 2
 -- opt.concealcursor = 'niv'
 
+opt.relativenumber = true
+
 if vim.loop.os_uname().sysname == "Darwin" then
 	vim.g.clipboard = {
 		name = "macOS-clipboard",
