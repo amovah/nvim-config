@@ -3,9 +3,9 @@ local config = {}
 function config.lspsaga()
 	local saga = require("lspsaga")
 	saga.init_lsp_saga({
-		-- symbol_in_winbar = {
-		--   enable = true,
-		-- },
+		symbol_in_winbar = {
+			enable = true,
+		},
 	})
 end
 
@@ -31,16 +31,6 @@ function config.mason_lspconfig()
 			"bashls",
 			"jsonls",
 		},
-	})
-end
-
-function config.nlsp()
-	require("nlspsettings").setup({
-		config_home = vim.fn.stdpath("config") .. "/nlsp-settings",
-		local_settings_dir = ".nlsp-settings",
-		local_settings_root_markers_fallback = { ".git" },
-		append_default_schemas = true,
-		loader = "json",
 	})
 end
 
