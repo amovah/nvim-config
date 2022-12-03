@@ -1,5 +1,5 @@
 local opt = vim.opt
-local cache_dir = vim.env.HOME .. "/.cache/nvim/"
+local cache_dir = require("core.helper").get_cache_path()
 
 opt.termguicolors = true
 opt.hidden = true
@@ -39,7 +39,6 @@ opt.showtabline = 0
 opt.winwidth = 30
 opt.pumheight = 15
 opt.showcmd = false
-
 opt.cmdheight = 0
 opt.laststatus = 3
 opt.list = true
@@ -53,14 +52,12 @@ opt.expandtab = true
 opt.autoindent = true
 opt.tabstop = 2
 opt.shiftwidth = 2
--- opt.diffopt:append("linematch:50")
 
 -- wrap
 opt.linebreak = true
 opt.whichwrap = "h,l,<,>,[,],~"
 opt.breakindentopt = "shift:2,min:20"
-opt.showbreak = "↳ "
-
+opt.showbreak = "↳  "
 opt.foldlevelstart = 99
 opt.foldmethod = "marker"
 
