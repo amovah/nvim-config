@@ -88,6 +88,7 @@ function M.lsp_config()
 		"bashls",
 		"sourcekit",
 		"jsonls",
+		"bufls",
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
