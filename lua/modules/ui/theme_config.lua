@@ -43,8 +43,10 @@ local function apply_theme_config(theme)
 	elseif utils.string_start_with(theme, "github") then
 		scheme = theme
 	elseif scheme == "catppuccin" then
-		vim.g.catppuccin_flavour = variant
-		require("catppuccin").setup()
+		require("catppuccin").setup({
+			flavour = variant,
+			transparent_background = true,
+		})
 	elseif scheme == "onedarkpro" or scheme == "onedarkpro_onedark" then
 		scheme = "onedarkpro"
 		if variant == "vivid" then
