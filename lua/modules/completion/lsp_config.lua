@@ -96,12 +96,16 @@ function M.lsp_config()
 	end
 
 	lspconfig.gopls.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
 		cmd = { "gopls", "serve" },
 		filetypes = { "go", "gomod" },
 		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
-		-- settings = {
-		-- 	gopls = {},
-		-- },
+		settings = {
+			gopls = {
+				buildFlags = { "-tags=wireinject" },
+			},
+		},
 	})
 end
 
