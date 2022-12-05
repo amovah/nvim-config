@@ -32,10 +32,6 @@ plugin({
 })
 
 plugin({
-	"tpope/vim-surround",
-})
-
-plugin({
 	"numToStr/Comment.nvim",
 	opt = true,
 	keys = { "g" },
@@ -159,6 +155,10 @@ plugin({
 	opt = true,
 	keys = { "s", "S" },
 	config = conf.leap,
+})
+
+plugin({
+	"tpope/vim-surround",
 })
 
 plugin({
