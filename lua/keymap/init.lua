@@ -92,7 +92,7 @@ nmap({
 	-- harpoon
 	{ "<Leader>hh", cmd([[lua require("harpoon.ui").toggle_quick_menu()]]), opts(noremap, silent) },
 	{ "<Leader>ha", cmd([[lua require("harpoon.mark").add_file()]]), opts(noremap, silent) },
-	{ "<Tab>", cmd([[lua require("harpoon.ui").nav_next()]]), opts(noremap, silent) },
+	{ "<Leader><Tab>", cmd([[lua require("harpoon.ui").nav_next()]]), opts(noremap, silent) },
 	{ "<S-Tab>", cmd([[lua require("harpoon.ui").nav_prev()]]), opts(noremap, silent) },
 	-- Dadbod
 	{ "<Leader>dd", cmd([[DBUIToggle]]), opts(noremap, silent) },
