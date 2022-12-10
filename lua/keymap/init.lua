@@ -12,9 +12,27 @@ nmap({
 	{ "<Leader>pi", cmd("PackerInstall"), opts(noremap, silent) },
 	{ "<Leader>pc", cmd("PackerCompile"), opts(noremap, silent) },
 	{ "<Leader>ps", cmd("PackerSync"), opts(noremap, silent) },
-	-- nvimtree
-	{ "<Leader>ee", cmd("NvimTreeToggle"), opts(noremap, silent) },
-	{ "<Leader>eh", cmd("NvimTreeFindFileToggle"), opts(noremap, silent) },
+	-- nvimtree - I set a hard hotkey to prevent to use nvim tree expect on necessary times
+	{ "<Leader>ntee", cmd("NvimTreeToggle"), opts(noremap, silent) },
+	{ "<Leader>nteeh", cmd("NvimTreeFindFileToggle"), opts(noremap, silent) },
+	-- Telescope file file_browser
+	{
+		"<Leader>ee",
+		function()
+			require("telescope").extensions.file_browser.file_browser({})
+		end,
+		opts(noremap, silent),
+	},
+	{
+		"<Leader>eh",
+		function()
+			require("telescope").extensions.file_browser.file_browser({
+				path = vim.fn.expand("%:p:h"),
+				cwd = vim.loop.cwd(),
+			})
+		end,
+		opts(noremap, silent),
+	},
 	-- LSP
 	{ "gd", vim.lsp.buf.definition, opts(noremap, silent) },
 	-- { 'gd', cmd('Lspsaga preview_definition'), opts(noremap, silent) },
@@ -44,23 +62,6 @@ nmap({
 	{ "<Leader>fst", cmd([[lua require('telescope.builtin').treesitter()]]), opts(noremap, silent) },
 	{ "<Leader>fr", cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ "<Leader>fd", cmd([[lua require('telescope.builtin').diagnostics()]]), opts(noremap, silent) },
-	{
-		"<Leader>fee",
-		function()
-			require("telescope").extensions.file_browser.file_browser({})
-		end,
-		opts(noremap, silent),
-	},
-	{
-		"<Leader>feh",
-		function()
-			require("telescope").extensions.file_browser.file_browser({
-				path = vim.fn.expand("%:p:h"),
-				cwd = vim.loop.cwd(),
-			})
-		end,
-		opts(noremap, silent),
-	},
 	{ "<Leader>ft", cmd([[Telescope]]), opts(noremap, silent) },
 	{ "<Leader>fp", cmd("Telescope neoclip"), opts(noremap, silent) },
 	{ "<Leader>fh", cmd([[lua require('telescope.builtin').help_tags()]]), opts(noremap, silent) },
