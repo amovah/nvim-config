@@ -114,6 +114,7 @@ function M.null_ls()
 			null_ls.builtins.formatting.yapf,
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.swiftformat,
+			null_ls.builtins.formatting.protolint,
 		},
 		on_attach = on_attach,
 	})
