@@ -167,6 +167,7 @@ local function setup_theme()
 				"onedarkpro_onedark",
 				"onedarkpro_onedark_vivid",
 				"onedarkpro_onedark_dark",
+				"oxocarbon",
 			}
 
 			local result = {}

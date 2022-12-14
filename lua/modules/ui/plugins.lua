@@ -36,6 +36,7 @@ local themes = {
 	"yazeed1s/minimal.nvim",
 	"Mofiqul/adwaita.nvim",
 	"olimorris/onedarkpro.nvim",
+	"nyoom-engineering/oxocarbon.nvim",
 }
 plugin({
 	"glepnir/zephyr-nvim",
