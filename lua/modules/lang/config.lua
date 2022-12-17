@@ -5,10 +5,11 @@ function config.nvim_treesitter()
 	vim.api.nvim_command("set foldexpr=nvim_treesitter#foldexpr()")
 
 	require("nvim-treesitter.configs").setup({
-		ensure_installed = "all",
-		ignore_install = { "phpdoc" },
+		ensure_installed = { "go", "rust", "javascript" },
+		auto_install = true,
 		highlight = {
 			enable = true,
+			additional_vim_regex_highlighting = false,
 		},
 		textobjects = {
 			select = {

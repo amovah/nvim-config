@@ -59,12 +59,24 @@ local function apply_theme_config(theme)
 		})
 	end
 
-	vim.cmd("colorscheme " .. scheme)
+	vim.cmd.colorscheme(scheme)
+end
+
+local function apply_transparent_config(isSet)
+	if isSet then
+		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	end
 end
 
 local function store_theme(theme)
 	local theme_path = vim.fn.stdpath("data") .. "/theme"
 	os.execute("echo " .. theme .. " > " .. theme_path)
+end
+
+local function store_transparent(isSet)
+	local transparent_path = vim.fn.stdpath("data") .. "/transparent"
+	os.execute("echo " .. tostring(isSet) .. " > " .. transparent_path)
 end
 
 local function setup_theme()
@@ -75,15 +87,30 @@ local function setup_theme()
 			apply_theme_config(value)
 		end
 	else
-		vim.cmd("colorscheme zephyr")
+		apply_theme_config("zephyr")
 	end
+
+	local transparent_path = vim.fn.stdpath("data") .. "/transparent"
+	if utils.file_exists(transparent_path) then
+		local theme = utils.lines_from(transparent_path)
+		for _, value in pairs(theme) do
+			apply_transparent_config(value == "true")
+		end
+	end
+
+	vim.api.nvim_create_user_command("SetTransparent", function()
+		apply_transparent_config(true)
+		store_transparent(true)
+	end, {})
 
 	vim.api.nvim_create_user_command("ChangeTheme", function(opts)
 		apply_theme_config(opts.args)
 		store_theme(opts.args)
+		apply_transparent_config(false)
+		store_transparent(false)
 	end, {
 		nargs = 1,
-		complete = function(ArgLead, CmdLine, CursorPos)
+		complete = function(ArgLead, _, _)
 			local themes = {
 				"neon_default",
 				"neon_doom",

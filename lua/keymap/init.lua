@@ -84,6 +84,7 @@ nmap({
 	{ "<Leader>gdd", cmd("Gvdiffsplit!"), opts(noremap, silent) },
 	{ "<Leader>gdl", cmd("diffget //2"), opts(noremap, silent) },
 	{ "<Leader>gdr", cmd("diffget //3"), opts(noremap, silent) },
+	{ "<Leader>gdp", cmd("diffput"), opts(noremap, silent) },
 	-- refactoring
 	{ "<Leader>rp", cmd([[lua require('refactoring').debug.printf({below = false})]]), opts(noremap, silent) },
 	{ "<Leader>rv", cmd([[lua require('refactoring').debug.print_var({ normal = true })]]), opts(noremap, silent) },
