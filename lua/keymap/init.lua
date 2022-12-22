@@ -19,7 +19,10 @@ nmap({
 	{
 		"<Leader>ee",
 		function()
-			require("telescope").extensions.file_browser.file_browser({})
+			require("telescope").extensions.file_browser.file_browser({
+				respect_gitignore = false,
+				hidden = true,
+			})
 		end,
 		opts(noremap, silent),
 	},
@@ -29,6 +32,8 @@ nmap({
 			require("telescope").extensions.file_browser.file_browser({
 				path = vim.fn.expand("%:p:h"),
 				cwd = vim.loop.cwd(),
+				respect_gitignore = false,
+				hidden = true,
 			})
 		end,
 		opts(noremap, silent),
