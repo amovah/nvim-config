@@ -80,23 +80,8 @@ plugin({
 })
 
 plugin({
-	"folke/twilight.nvim",
-	config = conf.twilight,
-	opt = true,
-	cmd = {
-		"Twilight",
-		"TwilightEnable",
-		"TwilightDisable",
-	},
-})
-
-plugin({
 	"editorconfig/editorconfig-vim",
 	config = conf.editorconfig,
-})
-
-plugin({
-	"wellle/targets.vim",
 })
 
 plugin({
@@ -116,25 +101,9 @@ plugin({
 })
 
 plugin({
-	"Pocco81/true-zen.nvim",
-	opt = true,
-	cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" },
-	config = conf.true_zen,
-})
-
-plugin({
 	"mbbill/undotree",
 	opt = true,
 	cmd = "UndotreeToggle",
-})
-
--- TODO: key mapping is missing, should add
-plugin({
-	"NTBBloodbath/rest.nvim",
-	opt = true,
-	ft = { "http" },
-	config = conf.rest,
-	requires = { "nvim-lua/plenary.nvim" },
 })
 
 plugin({
@@ -159,16 +128,6 @@ plugin({
 
 plugin({
 	"tpope/vim-surround",
-})
-
-plugin({
-	"tpope/vim-dadbod",
-	requires = {
-		"kristijanhusak/vim-dadbod-ui",
-	},
-	config = conf.dadbod,
-	opt = true,
-	cmd = { "DBUIToggle" },
 })
 
 plugin({

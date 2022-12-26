@@ -72,7 +72,7 @@ opt.colorcolumn = "100"
 
 opt.relativenumber = true
 -- opt.signcolumn = "yes"
--- opt.cursorline = true
+opt.cursorline = true
 
 if vim.loop.os_uname().sysname == "Darwin" then
 	vim.g.clipboard = {

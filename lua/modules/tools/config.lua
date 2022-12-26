@@ -48,25 +48,21 @@ function config.colorizer()
 	require("colorizer").setup({})
 end
 
-function config.twilight()
-	require("twilight").setup({})
-end
-
 function config.editorconfig()
 	vim.g.EditorConfig_exclude_patterns = { "fugitive://.*", "scp://.*" }
 end
 
 function config.neoclip()
-	require("neoclip").setup({})
+	require("neoclip").setup({
+		keys = {
+			telescope = {
+				i = {
+					paste = "<cr>",
+				},
+			},
+		},
+	})
 	require("telescope").load_extension("neoclip")
-end
-
-function config.true_zen()
-	require("true-zen").setup({})
-end
-
-function config.rest()
-	require("rest-nvim").setup({})
 end
 
 function config.git_conflict()
@@ -75,10 +71,6 @@ end
 
 function config.leap()
 	require("leap").set_default_keymaps()
-end
-
-function config.dadbod()
-	vim.g.db_ui_save_location = string.format("%s/dadbod_ui", vim.fn.stdpath("data"))
 end
 
 function config.updater()
