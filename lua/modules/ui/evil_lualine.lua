@@ -58,7 +58,7 @@
 -- })
 
 local function full_file_path()
-	return vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. "->" .. vim.fn.expand("%:r")
+	return vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. "->" .. vim.fn.pathshorten(vim.fn.expand("%:."))
 end
 
 require("lualine").setup({
