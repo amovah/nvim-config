@@ -56,23 +56,6 @@ function M.lsp_config()
 	local lspconfig = require("lspconfig")
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-	local server_config = {
-		on_attach = on_attach,
-		capabilities = capabilities,
-		settings = {
-			Lua = {
-				diagnostics = {
-					globals = { "vim" },
-				},
-			},
-			yaml = {
-				schemas = {
-					kubernetes = "globPattern",
-				},
-			},
-		},
-	}
-
 	local lsp_servers = {
 		"rust_analyzer",
 		"tsserver",
@@ -83,8 +66,6 @@ function M.lsp_config()
 		"tailwindcss",
 		"terraformls",
 		"vimls",
-		"sumneko_lua",
-		"yamlls",
 		"bashls",
 		"sourcekit",
 		"jsonls",
@@ -92,8 +73,17 @@ function M.lsp_config()
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
-		lspconfig[lsp].setup(server_config)
+		lspconfig[lsp].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
 	end
+
+	lspconfig.solc.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		cmd = { "solc", "--lsp" },
+	})
 
 	lspconfig.gopls.setup({
 		on_attach = on_attach,
@@ -102,6 +92,23 @@ function M.lsp_config()
 		filetypes = { "go", "gomod" },
 		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 	})
+
+	lspconfig.yamlls.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = {
+			yaml = {
+				schemas = {
+					kubernetes = "globPattern",
+				},
+			},
+		},
+	})
+
+	local sumneko_config = require("modules.completion.sumneko_lua_lsp")
+	sumneko_config.on_attach = on_attach
+	sumneko_config.capabilities = capabilities
+	lspconfig.sumneko_lua.setup(sumneko_config)
 end
 
 function M.null_ls()

@@ -17,19 +17,7 @@ function config.mason_lspconfig()
 	require("mason-lspconfig").setup({
 		ensure_installed = {
 			"gopls",
-			"rust_analyzer",
-			"tsserver",
-			"dockerls",
-			"cssls",
-			"jedi_language_server",
-			"solc",
-			"tailwindcss",
-			"terraformls",
-			"vimls",
 			"sumneko_lua",
-			"yamlls",
-			"bashls",
-			"jsonls",
 		},
 	})
 end

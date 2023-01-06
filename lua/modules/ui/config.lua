@@ -78,4 +78,8 @@ function config.indent_blankline()
 	require("indent_blankline").setup({})
 end
 
+function config.status_line()
+	require("modules.ui.evil_lualine")
+end
+
 return config

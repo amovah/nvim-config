@@ -11,10 +11,7 @@ local function apply_theme_config(theme)
 		end
 	end
 
-	if scheme == "neon" then
-		vim.g.neon_style = variant
-		vim.g.neon_italic_keyword = true
-	elseif scheme == "material" then
+	if scheme == "material" then
 		vim.g.material_style = variant
 	elseif scheme == "tokyonight" then
 		vim.g.tokyonight_style = variant
@@ -112,10 +109,6 @@ local function setup_theme()
 		nargs = 1,
 		complete = function(ArgLead, _, _)
 			local themes = {
-				"neon_default",
-				"neon_doom",
-				"neon_dark",
-				"neon_light",
 				"codedark",
 				"material_darker",
 				"material_ligher",
@@ -138,15 +131,11 @@ local function setup_theme()
 				"edge_default",
 				"edge_aura",
 				"edge_neon",
-				"omni",
 				"aurora",
 				"monokai_default",
 				"monokai_pro",
 				"monokai_soda",
 				"monokai_ristretto",
-				"melange",
-				"falcon",
-				"nord",
 				"onedark_dark",
 				"onedark_darker",
 				"onedark_cool",
@@ -161,7 +150,6 @@ local function setup_theme()
 				"everforest_medium",
 				"everforest_soft",
 				"doom-one",
-				"vn-night",
 				"github_dark",
 				"github_dimmed",
 				"github_dark_default",
@@ -169,7 +157,6 @@ local function setup_theme()
 				"github_light",
 				"github_light_default",
 				"github_light_colorblind",
-				"monochrome",
 				"rose-pine",
 				"catppuccin_macchiato",
 				"catppuccin_latte",
@@ -184,7 +171,7 @@ local function setup_theme()
 				"terafox",
 				"carbonfox",
 				"vimdark",
-				"everblus",
+				"everblush",
 				"kanagawa",
 				"tokyodark",
 				"minimal",
@@ -195,6 +182,9 @@ local function setup_theme()
 				"onedarkpro_onedark_vivid",
 				"onedarkpro_onedark_dark",
 				"oxocarbon",
+				"ayu-dark",
+				"ayu-light",
+				"ayu-migrage",
 			}
 
 			local result = {}

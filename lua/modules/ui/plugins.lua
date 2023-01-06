@@ -3,7 +3,6 @@ local conf = require("modules.ui.config")
 
 --#region theme
 local themes = {
-	"rafamadriz/neon",
 	"tomasiser/vim-code-dark",
 	"marko-cerovac/material.nvim",
 	"bluz71/vim-nightfly-guicolors",
@@ -12,19 +11,13 @@ local themes = {
 	"sainnhe/sonokai",
 	"mhartington/oceanic-next",
 	"sainnhe/edge",
-	"yonlu/omni.vim",
 	"ray-x/aurora",
 	"tanvirtin/monokai.nvim",
-	"savq/melange",
-	"fenetikm/falcon",
-	"shaunsingh/nord.nvim",
 	"navarasu/onedark.nvim",
 	"sainnhe/gruvbox-material",
 	"sainnhe/everforest",
 	"NTBBloodbath/doom-one.nvim",
-	"nxvu699134/vn-night.nvim",
 	"projekt0n/github-nvim-theme",
-	"kdheepak/monochrome.nvim",
 	"rose-pine/neovim",
 	{ "catppuccin/nvim", as = "catppuccin" },
 	"FrenzyExists/aquarium-vim",
@@ -37,6 +30,7 @@ local themes = {
 	"Mofiqul/adwaita.nvim",
 	"olimorris/onedarkpro.nvim",
 	"nyoom-engineering/oxocarbon.nvim",
+	"Shatur/neovim-ayu",
 }
 plugin({
 	"glepnir/zephyr-nvim",
@@ -61,9 +55,8 @@ plugin({
 })
 
 plugin({
-	"glepnir/galaxyline.nvim",
-	branch = "main",
-	config = conf.galaxyline,
+	"nvim-lualine/lualine.nvim",
+	config = conf.status_line,
 	requires = "kyazdani42/nvim-web-devicons",
 })
 
