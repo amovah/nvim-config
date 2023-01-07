@@ -184,7 +184,7 @@ local function setup_theme()
 				"oxocarbon",
 				"ayu-dark",
 				"ayu-light",
-				"ayu-migrage",
+				"ayu-mirage",
 			}
 
 			local result = {}
