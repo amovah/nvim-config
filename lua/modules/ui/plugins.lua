@@ -13,7 +13,6 @@ local themes = {
 	"sainnhe/edge",
 	"ray-x/aurora",
 	"tanvirtin/monokai.nvim",
-	"navarasu/onedark.nvim",
 	"sainnhe/gruvbox-material",
 	"sainnhe/everforest",
 	"NTBBloodbath/doom-one.nvim",

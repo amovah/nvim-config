@@ -27,10 +27,6 @@ local function apply_theme_config(theme)
 		if variant ~= "default" then
 			scheme = scheme .. "_" .. variant
 		end
-	elseif scheme == "onedark" then
-		vim.g.onedark_config = {
-			style = variant,
-		}
 	elseif scheme == "gruvbox-material" then
 		vim.g.gruvbox_material_better_performance = 1
 		vim.g.gruvbox_material_background = variant
@@ -44,16 +40,13 @@ local function apply_theme_config(theme)
 			flavour = variant,
 			transparent_background = true,
 		})
-	elseif scheme == "onedarkpro" or scheme == "onedarkpro_onedark" then
-		scheme = "onedarkpro"
+	elseif scheme == "onedark" then
+		scheme = "onedark"
 		if variant == "vivid" then
-			variant = "onedark_vivid"
+			scheme = scheme .. "_vivid"
 		elseif variant == "dark" then
-			variant = "onedark_dark"
+			scheme = scheme .. "_dark"
 		end
-		require("onedarkpro").setup({
-			dark_theme = variant,
-		})
 	end
 
 	vim.cmd.colorscheme(scheme)
@@ -136,13 +129,6 @@ local function setup_theme()
 				"monokai_pro",
 				"monokai_soda",
 				"monokai_ristretto",
-				"onedark_dark",
-				"onedark_darker",
-				"onedark_cool",
-				"onedark_deep",
-				"onedark_warm",
-				"onedark_warmer",
-				"onedark_light",
 				"gruvbox-material_hard",
 				"gruvbox-material_medium",
 				"gruvbox-material_soft",
@@ -178,9 +164,9 @@ local function setup_theme()
 				"minimal-base16",
 				"adwaita",
 				"zephyr",
-				"onedarkpro_onedark",
-				"onedarkpro_onedark_vivid",
-				"onedarkpro_onedark_dark",
+				"onedark",
+				"onedark_vivid",
+				"onedark_dark",
 				"oxocarbon",
 				"ayu-dark",
 				"ayu-light",
