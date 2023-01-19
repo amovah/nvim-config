@@ -85,19 +85,6 @@ local cmp_config = function()
 			{ name = "buffer" },
 		},
 	})
-
-	vim.api.nvim_create_autocmd("FileType", {
-		pattern = { "sql" },
-		callback = function()
-			cmp.setup.buffer({
-				sources = {
-					{
-						name = "vim-dadbod-completion",
-					},
-				},
-			})
-		end,
-	})
 end
 
 return cmp_config

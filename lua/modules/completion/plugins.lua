@@ -56,7 +56,6 @@ plugin({
 		{ "hrsh7th/vim-vsnip", after = "nvim-cmp" },
 		{ "hrsh7th/vim-vsnip-integ", after = "nvim-cmp" },
 		{ "rafamadriz/friendly-snippets", after = "nvim-cmp" },
-		{ "kristijanhusak/vim-dadbod-completion", after = "nvim-cmp" },
 	},
 	config = function()
 		require("modules.completion.cmp_config")()
