@@ -12,9 +12,6 @@ nmap({
 	{ "<Leader>pi", cmd("PackerInstall"), opts(noremap, silent) },
 	{ "<Leader>pc", cmd("PackerCompile"), opts(noremap, silent) },
 	{ "<Leader>ps", cmd("PackerSync"), opts(noremap, silent) },
-	-- nvimtree - I set a hard hotkey to prevent to use nvim tree expect on necessary times
-	{ "<Leader>ntee", cmd("NvimTreeToggle"), opts(noremap, silent) },
-	{ "<Leader>nteeh", cmd("NvimTreeFindFileToggle"), opts(noremap, silent) },
 	-- Telescope file file_browser
 	{
 		"<Leader>ee",
