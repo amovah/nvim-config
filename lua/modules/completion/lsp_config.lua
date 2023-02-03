@@ -62,7 +62,7 @@ function M.lsp_config()
 		"dockerls",
 		"cssls",
 		"jedi_language_server",
-		"solc",
+		"solidity_ls",
 		"tailwindcss",
 		"terraformls",
 		"vimls",
@@ -77,12 +77,6 @@ function M.lsp_config()
 			capabilities = capabilities,
 		})
 	end
-
-	lspconfig.solc.setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-		cmd = { "solc", "--lsp" },
-	})
 
 	lspconfig.gopls.setup({
 		on_attach = on_attach,
