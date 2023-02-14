@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
 			callback = function()
 				vim.lsp.buf.format({
 					filter = function(client)
-						return client.name ~= "tsserver" and client.name ~= "sumneko_lua"
+						return client.name ~= "tsserver" and client.name ~= "lua_ls"
 					end,
 					bufnr = bufnr,
 				})
@@ -98,10 +98,30 @@ function M.lsp_config()
 		},
 	})
 
-	local sumneko_config = require("modules.completion.sumneko_lua_lsp")
-	sumneko_config.on_attach = on_attach
-	sumneko_config.capabilities = capabilities
-	lspconfig.sumneko_lua.setup(sumneko_config)
+	lspconfig.lua_ls.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = {
+			Lua = {
+				runtime = {
+					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+					version = "LuaJIT",
+				},
+				diagnostics = {
+					-- Get the language server to recognize the `vim` global
+					globals = { "vim" },
+				},
+				workspace = {
+					-- Make the server aware of Neovim runtime files
+					library = vim.api.nvim_get_runtime_file("", true),
+				},
+				-- Do not send telemetry data containing a randomized but unique identifier
+				telemetry = {
+					enable = false,
+				},
+			},
+		},
+	})
 end
 
 function M.null_ls()
