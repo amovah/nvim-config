@@ -131,9 +131,7 @@ function M.null_ls()
 			null_ls.builtins.diagnostics.eslint_d,
 			null_ls.builtins.formatting.prettierd,
 			null_ls.builtins.formatting.eslint_d,
-			null_ls.builtins.formatting.yapf.with({
-				extra_args = { "--style={based_on_style: google, column_limit: 100, indent_width: 4}" },
-			}),
+			null_ls.builtins.formatting.yapf,
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.swiftformat,
 			null_ls.builtins.formatting.protolint,
