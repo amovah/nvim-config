@@ -129,11 +129,11 @@ function M.null_ls()
 	null_ls.setup({
 		sources = {
 			null_ls.builtins.diagnostics.eslint_d.with({
-				only_local = "node_modules/.bin",
+				only_local = "./node_modules/.bin",
 			}),
 			null_ls.builtins.formatting.prettierd,
 			null_ls.builtins.formatting.eslint_d.with({
-				only_local = "node_modules/.bin",
+				only_local = "./node_modules/.bin",
 			}),
 			null_ls.builtins.formatting.yapf,
 			null_ls.builtins.formatting.stylua,
