@@ -49,11 +49,6 @@ end
 --#endregion
 
 plugin({
-	"glepnir/dashboard-nvim",
-	config = conf.dashboard,
-})
-
-plugin({
 	"nvim-lualine/lualine.nvim",
 	config = conf.status_line,
 	requires = "kyazdani42/nvim-web-devicons",

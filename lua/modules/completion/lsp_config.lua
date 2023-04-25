@@ -61,7 +61,7 @@ function M.lsp_config()
 		"tsserver",
 		"dockerls",
 		"cssls",
-		"jedi_language_server",
+		"pyright",
 		"solidity_ls",
 		"tailwindcss",
 		"terraformls",
