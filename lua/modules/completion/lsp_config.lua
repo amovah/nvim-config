@@ -135,7 +135,7 @@ function M.null_ls()
 			null_ls.builtins.formatting.eslint_d.with({
 				only_local = "./node_modules/.bin",
 			}),
-			null_ls.builtins.formatting.yapf,
+			null_ls.builtins.formatting.black,
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.swiftformat,
 			null_ls.builtins.formatting.protolint,
