@@ -43,6 +43,7 @@ plugin({
 	"j-hui/fidget.nvim",
 	after = "nvim-lspconfig",
 	config = conf.fidget,
+	branch = "legacy",
 })
 
 plugin({
