@@ -1,6 +1,8 @@
 local opt = vim.opt
 local cache_dir = require("core.helper").get_cache_path()
 
+vim.g.mapleader = " "
+
 opt.termguicolors = true
 opt.hidden = true
 opt.magic = true
