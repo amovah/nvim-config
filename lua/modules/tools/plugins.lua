@@ -26,8 +26,6 @@ return {
 	},
 	{
 		"numToStr/Comment.nvim",
-		lazy = true,
-		keys = { "g" },
 		config = conf.comment,
 	},
 	{
