@@ -1,1 +1,3 @@
 lua/config_local.lua
+lazy-lock.json
+.luarc.json

@@ -52,10 +52,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrwSettings = 1
 vim.g.loaded_netrwFileHandlers = 1
 
-local pack = require("core.pack")
-
-pack.ensure_plugins()
+local packman = require("core.packman")
+packman.ensure_packman()
 require("core.options")
-pack.load_compile()
+packman.load()
 require("keymap")
 pcall(require, "config_local")

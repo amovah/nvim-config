@@ -1,79 +1,57 @@
-local plugin = require("core.pack").register_plugin
 local conf = require("modules.ui.config")
 
---#region theme
-local themes = {
-	"tomasiser/vim-code-dark",
-	"marko-cerovac/material.nvim",
-	"bluz71/vim-nightfly-guicolors",
-	"bluz71/vim-moonfly-colors",
-	"folke/tokyonight.nvim",
-	"sainnhe/sonokai",
-	"mhartington/oceanic-next",
-	"sainnhe/edge",
-	"ray-x/aurora",
-	"tanvirtin/monokai.nvim",
-	"sainnhe/gruvbox-material",
-	"sainnhe/everforest",
-	"NTBBloodbath/doom-one.nvim",
-	"projekt0n/github-nvim-theme",
-	"rose-pine/neovim",
-	{ "catppuccin/nvim", as = "catppuccin" },
-	"FrenzyExists/aquarium-vim",
-	"EdenEast/nightfox.nvim",
-	"ldelossa/vimdark",
-	"Everblush/everblush.nvim",
-	"rebelot/kanagawa.nvim",
-	"tiagovla/tokyodark.nvim",
-	"yazeed1s/minimal.nvim",
-	"Mofiqul/adwaita.nvim",
-	"olimorris/onedarkpro.nvim",
-	"nyoom-engineering/oxocarbon.nvim",
-	"Shatur/neovim-ayu",
+return {
+	{
+		"glepnir/zephyr-nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("modules.ui.theme_config")()
+		end,
+	},
+	{ "tomasiser/vim-code-dark", lazy = true },
+	{ "marko-cerovac/material.nvim", lazy = true },
+	{ "bluz71/vim-nightfly-guicolors", lazy = true },
+	{ "bluz71/vim-moonfly-colors", lazy = true },
+	{ "folke/tokyonight.nvim", lazy = true },
+	{ "sainnhe/sonokai", lazy = true },
+	{ "mhartington/oceanic-next", lazy = true },
+	{ "sainnhe/edge", lazy = true },
+	{ "ray-x/aurora", lazy = true },
+	{ "tanvirtin/monokai.nvim", lazy = true },
+	{ "sainnhe/gruvbox-material", lazy = true },
+	{ "sainnhe/everforest", lazy = true },
+	{ "NTBBloodbath/doom-one.nvim", lazy = true },
+	{ "projekt0n/github-nvim-theme", lazy = true },
+	{ "rose-pine/neovim", lazy = true },
+	{ "catppuccin/nvim", as = "catppuccin", lazy = true },
+	{ "FrenzyExists/aquarium-vim", lazy = true },
+	{ "EdenEast/nightfox.nvim", lazy = true },
+	{ "ldelossa/vimdark", lazy = true },
+	{ "Everblush/everblush.nvim", lazy = true },
+	{ "rebelot/kanagawa.nvim", lazy = true },
+	{ "tiagovla/tokyodark.nvim", lazy = true },
+	{ "yazeed1s/minimal.nvim", lazy = true },
+	{ "Mofiqul/adwaita.nvim", lazy = true },
+	{ "olimorris/onedarkpro.nvim", lazy = true },
+	{ "nyoom-engineering/oxocarbon.nvim", lazy = true },
+	{ "Shatur/neovim-ayu", lazy = true },
+	{
+		"nvim-lualine/lualine.nvim",
+		config = conf.status_line,
+		dependencies = "kyazdani42/nvim-web-devicons",
+	},
+	{
+		"akinsho/bufferline.nvim",
+		config = conf.nvim_bufferline,
+		dependencies = { "kyazdani42/nvim-web-devicons" },
+	},
+	{
+		"folke/which-key.nvim",
+		config = conf.which_key,
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = conf.indent_blankline,
+	},
 }
-plugin({
-	"glepnir/zephyr-nvim",
-	config = function()
-		require("modules.ui.theme_config")()
-	end,
-})
-for _, theme in pairs(themes) do
-	if type(theme) == "table" then
-		plugin(theme)
-	else
-		plugin({
-			theme,
-		})
-	end
-end
---#endregion
-
-plugin({
-	"nvim-lualine/lualine.nvim",
-	config = conf.status_line,
-	requires = "kyazdani42/nvim-web-devicons",
-})
-
-plugin({
-	"kyazdani42/nvim-tree.lua",
-	cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
-	config = conf.nvim_tree,
-	requires = "kyazdani42/nvim-web-devicons",
-})
-
-plugin({
-	"akinsho/bufferline.nvim",
-	config = conf.nvim_bufferline,
-	requires = "kyazdani42/nvim-web-devicons",
-	after = "nvim-lspconfig",
-})
-
-plugin({
-	"folke/which-key.nvim",
-	config = conf.which_key,
-})
-
-plugin({
-	"lukas-reineke/indent-blankline.nvim",
-	config = conf.indent_blankline,
-})

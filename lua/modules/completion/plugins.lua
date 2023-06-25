@@ -1,65 +1,56 @@
-local plugin = require("core.pack").register_plugin
 local conf = require("modules.completion.config")
 
-plugin({
-	"neovim/nvim-lspconfig",
-	config = function()
-		require("modules.completion.lsp_config").lsp_config()
-	end,
-	requires = {
-		"RRethy/vim-illuminate",
-		"hrsh7th/cmp-nvim-lsp",
-		"ray-x/lsp_signature.nvim",
+return {
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("modules.completion.lsp_config").lsp_config()
+		end,
+		dependencies = {
+			"RRethy/vim-illuminate",
+			"hrsh7th/cmp-nvim-lsp",
+			"ray-x/lsp_signature.nvim",
+		},
 	},
-})
-
-plugin({
-	"jose-elias-alvarez/null-ls.nvim",
-	after = "nvim-lspconfig",
-	config = function()
-		require("modules.completion.lsp_config").null_ls()
-	end,
-})
-
-plugin({
-	"glepnir/lspsaga.nvim",
-	cmd = "Lspsaga",
-	config = conf.lspsaga,
-	after = "nvim-lspconfig",
-})
-
-plugin({
-	"williamboman/mason.nvim",
-	config = conf.mason,
-})
-
-plugin({
-	"williamboman/mason-lspconfig.nvim",
-	after = "mason.nvim",
-	config = conf.mason_lspconfig,
-})
-
-plugin({
-	"j-hui/fidget.nvim",
-	after = "nvim-lspconfig",
-	config = conf.fidget,
-	branch = "legacy",
-})
-
-plugin({
-	"hrsh7th/nvim-cmp",
-	requires = {
-		"onsails/lspkind.nvim",
-		{ "hrsh7th/cmp-path", after = "nvim-cmp" },
-		{ "hrsh7th/cmp-buffer", after = "nvim-cmp" },
-		{ "hrsh7th/cmp-cmdline", after = "nvim-cmp" },
-		{ "hrsh7th/cmp-vsnip", after = "nvim-cmp" },
-		{ "hrsh7th/vim-vsnip", after = "nvim-cmp" },
-		{ "hrsh7th/vim-vsnip-integ", after = "nvim-cmp" },
-		{ "rafamadriz/friendly-snippets", after = "nvim-cmp" },
+	{
+		"williamboman/mason.nvim",
+		config = conf.mason,
 	},
-	config = function()
-		require("modules.completion.cmp_config")()
-	end,
-	after = "nvim-lspconfig",
-})
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = conf.mason_lspconfig,
+	},
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("modules.completion.lsp_config").null_ls()
+		end,
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"onsails/lspkind.nvim",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-vsnip",
+			"hrsh7th/vim-vsnip",
+			"hrsh7th/vim-vsnip-integ",
+			"rafamadriz/friendly-snippets",
+		},
+		config = function()
+			require("modules.completion.cmp_config")()
+		end,
+	},
+	{
+		"glepnir/lspsaga.nvim",
+		cmd = "Lspsaga",
+		config = conf.lspsaga,
+	},
+	{
+		"j-hui/fidget.nvim",
+		config = conf.fidget,
+		branch = "legacy",
+	},
+}
