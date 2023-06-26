@@ -30,8 +30,6 @@ return {
 	},
 	{
 		"AndrewRadev/splitjoin.vim",
-		lazy = true,
-		keys = { "gS", "gJ" },
 	},
 	"tpope/vim-abolish",
 	{
