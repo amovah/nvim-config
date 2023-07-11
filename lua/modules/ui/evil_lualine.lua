@@ -57,12 +57,8 @@
 -- 	extensions = {},
 -- })
 
-local function full_file_path()
-	return vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. " 💻 " .. vim.fn.pathshorten(vim.fn.expand("%:."))
-end
+-- local function full_file_path()
+-- 	return vim.fn.fnamemodify(vim.fn.getcwd(), ":t") .. " 💻 " .. vim.fn.pathshorten(vim.fn.expand("%:."))
+-- end
 
-require("lualine").setup({
-	sections = {
-		lualine_c = { full_file_path },
-	},
-})
+require("lualine").setup({})
