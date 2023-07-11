@@ -44,9 +44,12 @@ return {
 		end,
 	},
 	{
-		"glepnir/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		cmd = "Lspsaga",
 		config = conf.lspsaga,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter", -- optional
+		},
 	},
 	{
 		"j-hui/fidget.nvim",

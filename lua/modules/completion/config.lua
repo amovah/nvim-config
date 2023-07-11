@@ -2,11 +2,7 @@ local config = {}
 
 function config.lspsaga()
 	local saga = require("lspsaga")
-	saga.setup({
-		symbol_in_winbar = {
-			enable = false,
-		},
-	})
+	saga.setup({})
 end
 
 function config.mason()
