@@ -50,7 +50,12 @@ function config.which_key()
 end
 
 function config.indent_blankline()
-	require("ibl").setup({})
+	require("ibl").setup({
+		scope = {
+			show_start = false,
+			show_end = false,
+		},
+	})
 end
 
 function config.status_line()
