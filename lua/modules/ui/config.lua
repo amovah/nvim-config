@@ -50,7 +50,7 @@ function config.which_key()
 end
 
 function config.indent_blankline()
-	require("indent_blankline").setup({})
+	require("ibl").setup({})
 end
 
 function config.status_line()
