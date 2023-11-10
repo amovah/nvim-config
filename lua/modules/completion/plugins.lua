@@ -10,6 +10,7 @@ return {
 			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
 			"ray-x/lsp_signature.nvim",
+			"dense-analysis/ale",
 		},
 	},
 	{
@@ -19,13 +20,6 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = conf.mason_lspconfig,
-	},
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("modules.completion.lsp_config").null_ls()
-		end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -53,6 +47,5 @@ return {
 	{
 		"j-hui/fidget.nvim",
 		config = conf.fidget,
-		branch = "legacy",
 	},
 }

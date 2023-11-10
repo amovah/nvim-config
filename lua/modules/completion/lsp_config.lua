@@ -24,8 +24,8 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				vim.lsp.buf.format({
-					filter = function(client)
-						return client.name ~= "tsserver" and client.name ~= "lua_ls"
+					filter = function(attached_client)
+						return attached_client.name ~= "tsserver" and attached_client.name ~= "lua_ls"
 					end,
 					bufnr = bufnr,
 				})
@@ -67,7 +67,6 @@ function M.lsp_config()
 		"terraformls",
 		"vimls",
 		"bashls",
-		"sourcekit",
 		"jsonls",
 	}
 
@@ -122,26 +121,26 @@ function M.lsp_config()
 			},
 		},
 	})
-end
 
-function M.null_ls()
-	local null_ls = require("null-ls")
-	null_ls.setup({
-		sources = {
-			null_ls.builtins.diagnostics.eslint_d.with({
-				only_local = "./node_modules/.bin",
-			}),
-			null_ls.builtins.formatting.prettierd,
-			null_ls.builtins.formatting.eslint_d.with({
-				only_local = "./node_modules/.bin",
-			}),
-			null_ls.builtins.formatting.black,
-			null_ls.builtins.formatting.stylua,
-			null_ls.builtins.formatting.swiftformat,
-			null_ls.builtins.formatting.protolint,
-		},
-		on_attach = on_attach,
-	})
+	-- ale configuration
+	vim.g.ale_fixers = {
+		proto = { "buf-format" },
+		lua = { "stylua" },
+		python = { "black" },
+		javascript = { "prettier", "eslint" },
+		typescript = { "prettier", "eslint" },
+		markdown = { "prettier" },
+		solidity = { "forge" },
+	}
+	vim.g.ale_linters = {
+		proto = { "buf-lint" },
+	}
+	vim.g.ale_fix_on_save = 1
+	vim.g.ale_use_neovim_diagnostics_api = 1
+	vim.g.ale_completion_autoimport = 0
+	vim.g.ale_lint_on_text_changed = 0
+	vim.g.ale_lint_on_insert_leave = 1
+	vim.g.ale_linters_explicit = 1
 end
 
 return M
