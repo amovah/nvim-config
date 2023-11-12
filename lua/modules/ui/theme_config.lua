@@ -38,7 +38,6 @@ local function apply_theme_config(theme)
 	elseif scheme == "catppuccin" then
 		require("catppuccin").setup({
 			flavour = variant,
-			transparent_background = true,
 		})
 	elseif scheme == "onedark" then
 		scheme = "onedark"
@@ -171,6 +170,7 @@ local function setup_theme()
 				"ayu-dark",
 				"ayu-light",
 				"ayu-mirage",
+				"PaperColor",
 			}
 
 			local result = {}

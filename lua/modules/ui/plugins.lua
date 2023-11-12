@@ -9,6 +9,7 @@ return {
 			require("modules.ui.theme_config")()
 		end,
 	},
+	{ "NLKNguyen/papercolor-theme", lazy = true },
 	{ "tomasiser/vim-code-dark", lazy = true },
 	{ "marko-cerovac/material.nvim", lazy = true },
 	{ "bluz71/vim-nightfly-guicolors", lazy = true },

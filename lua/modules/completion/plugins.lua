@@ -10,8 +10,11 @@ return {
 			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
 			"ray-x/lsp_signature.nvim",
-			"dense-analysis/ale",
 		},
+	},
+	{
+		"dense-analysis/ale",
+		config = conf.ale,
 	},
 	{
 		"williamboman/mason.nvim",
