@@ -123,4 +123,25 @@ function M.lsp_config()
 	})
 end
 
+function M.none_ls()
+	local null_ls = require("null-ls")
+	null_ls.setup({
+		sources = {
+			null_ls.builtins.diagnostics.eslint_d.with({
+				only_local = "./node_modules/.bin",
+			}),
+			null_ls.builtins.formatting.prettierd,
+			null_ls.builtins.formatting.eslint_d.with({
+				only_local = "./node_modules/.bin",
+			}),
+			null_ls.builtins.formatting.black,
+			null_ls.builtins.formatting.stylua,
+			null_ls.builtins.formatting.swiftformat,
+			null_ls.builtins.formatting.buf,
+			null_ls.builtins.diagnostics.buf,
+		},
+		on_attach = on_attach,
+	})
+end
+
 return M

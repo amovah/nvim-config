@@ -13,8 +13,11 @@ return {
 		},
 	},
 	{
-		"dense-analysis/ale",
-		config = conf.ale,
+		"nvimtools/none-ls.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("modules.completion.lsp_config").none_ls()
+		end,
 	},
 	{
 		"williamboman/mason.nvim",
