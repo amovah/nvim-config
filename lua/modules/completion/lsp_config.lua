@@ -139,6 +139,7 @@ function M.none_ls()
 			null_ls.builtins.formatting.swiftformat,
 			null_ls.builtins.formatting.buf,
 			null_ls.builtins.formatting.forge_fmt,
+			null_ls.builtins.code_actions.gomodifytags,
 		},
 		on_attach = on_attach,
 	})
