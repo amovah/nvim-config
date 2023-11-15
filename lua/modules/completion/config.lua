@@ -22,7 +22,12 @@ function config.mason_lspconfig()
 end
 
 function config.fidget()
-	require("fidget").setup({})
+	require("fidget").setup({
+		progress = {
+			ignore_done_already = true,
+			ignore = { "null-ls" },
+		},
+	})
 end
 
 return config
