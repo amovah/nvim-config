@@ -59,13 +59,12 @@ function M.lsp_config()
 		"tsserver",
 		"dockerls",
 		"cssls",
-		"jedi_language_server",
+		"pylyzer",
 		"solidity_ls_nomicfoundation",
 		"tailwindcss",
 		"terraformls",
 		"vimls",
 		"bashls",
-		"jsonls",
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
@@ -125,11 +124,11 @@ function M.none_ls()
 	local null_ls = require("null-ls")
 	null_ls.setup({
 		sources = {
-			null_ls.builtins.diagnostics.eslint_d.with({
+			require("none-ls.diagnostics.eslint").with({
 				only_local = "./node_modules/.bin",
 			}),
 			null_ls.builtins.formatting.prettierd,
-			null_ls.builtins.formatting.eslint_d.with({
+			require("none-ls.formatting.eslint").with({
 				only_local = "./node_modules/.bin",
 			}),
 			null_ls.builtins.formatting.black,

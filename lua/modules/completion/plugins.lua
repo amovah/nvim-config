@@ -14,7 +14,10 @@ return {
 	},
 	{
 		"nvimtools/none-ls.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvimtools/none-ls-extras.nvim",
+    },
 		config = function()
 			require("modules.completion.lsp_config").none_ls()
 		end,
