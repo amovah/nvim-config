@@ -93,11 +93,6 @@ nmap({
 	{ "<Leader>rc", cmd([[lua require('refactoring').debug.cleanup({})]]), opts(noremap, silent) },
 	-- clear highlighted search
 	{ "<C-l>", cmd("noh"), opts(noremap, silent) },
-	-- harpoon
-	{ "<Leader>hh", cmd([[lua require("harpoon.ui").toggle_quick_menu()]]), opts(noremap, silent) },
-	{ "<Leader>ha", cmd([[lua require("harpoon.mark").add_file()]]), opts(noremap, silent) },
-	{ "<Leader><Tab>", cmd([[lua require("harpoon.ui").nav_next()]]), opts(noremap, silent) },
-	{ "<S-Tab>", cmd([[lua require("harpoon.ui").nav_prev()]]), opts(noremap, silent) },
 })
 
 vmap({
