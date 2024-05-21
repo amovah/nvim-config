@@ -2,6 +2,14 @@ local conf = require("modules.completion.config")
 
 return {
 	{
+		"williamboman/mason.nvim",
+		config = conf.mason,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = conf.mason_lspconfig,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("modules.completion.lsp_config").lsp_config()
@@ -14,21 +22,13 @@ return {
 	},
 	{
 		"nvimtools/none-ls.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvimtools/none-ls-extras.nvim",
-    },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvimtools/none-ls-extras.nvim",
+		},
 		config = function()
 			require("modules.completion.lsp_config").none_ls()
 		end,
-	},
-	{
-		"williamboman/mason.nvim",
-		config = conf.mason,
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = conf.mason_lspconfig,
 	},
 	{
 		"hrsh7th/nvim-cmp",
