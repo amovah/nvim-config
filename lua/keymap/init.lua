@@ -72,11 +72,10 @@ nmap({
 	{ "[b", cmd("BufferLineCyclePrev"), opts(noremap, silent) },
 	{ "<Leader>bs", cmd("BufferLineSortByDirectory"), opts(noremap, silent) },
 	-- Trouble
-	{ "<Leader>xx", cmd("Trouble"), opts(noremap, silent) },
-	{ "<Leader>xw", cmd("Trouble workspace_diagnostics"), opts(noremap, silent) },
-	{ "<Leader>xd", cmd("Trouble document_diagnostics"), opts(noremap, silent) },
-	{ "<Leader>xl", cmd("Trouble loclist"), opts(noremap, silent) },
-	{ "<Leader>xq", cmd("Trouble quickfix"), opts(noremap, silent) },
+	{ "<Leader>xx", cmd("Trouble diagnostics toggle"), opts(noremap, silent) },
+	{ "<Leader>xd", cmd("Trouble diagnostics toggle filter.buf=0"), opts(noremap, silent) },
+	{ "<Leader>xl", cmd("Trouble loclist toggle"), opts(noremap, silent) },
+	{ "<Leader>xq", cmd("Trouble qflist toggle"), opts(noremap, silent) },
 	-- { 'gr', cmd('Trouble lsp_references'), opts(noremap, silent) },
 	-- git
 	{ "<Leader>gg", cmd("Git"), opts(noremap, silent) },
