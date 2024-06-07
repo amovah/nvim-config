@@ -47,10 +47,6 @@ function config.colorizer()
 	require("colorizer").setup({})
 end
 
-function config.editorconfig()
-	vim.g.EditorConfig_exclude_patterns = { "fugitive://.*", "scp://.*" }
-end
-
 function config.neoclip()
 	require("neoclip").setup({
 		keys = {

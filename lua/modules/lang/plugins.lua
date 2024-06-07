@@ -23,21 +23,6 @@ return {
 		config = conf.refactoring,
 	},
 	{
-		"kevinhwang91/nvim-ufo",
-		dependencies = { "kevinhwang91/promise-async" },
-		config = conf.ufo,
-	},
-	{
-		"simrat39/symbols-outline.nvim",
-		lazy = true,
-		cmd = {
-			"SymbolsOutline",
-			"SymbolsOutlineClose",
-			"SymbolsOutlineOpen",
-		},
-		config = conf.symbols_outline,
-	},
-	{
 		"folke/trouble.nvim",
 		lazy = true,
 		cmd = { "Trouble" },

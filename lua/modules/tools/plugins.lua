@@ -39,10 +39,6 @@ return {
 		config = conf.colorizer,
 	},
 	{
-		"editorconfig/editorconfig-vim",
-		config = conf.editorconfig,
-	},
-	{
 		"iamcco/markdown-preview.nvim",
 		build = "cd app && npm ci",
 		init = function()
