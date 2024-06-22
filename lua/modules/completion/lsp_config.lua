@@ -59,25 +59,17 @@ function M.lsp_config()
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 	local lsp_servers = {
-		"rust_analyzer",
 		"tsserver",
-		"dockerls",
-		"cssls",
 		"pylyzer",
-		"solidity_ls_nomicfoundation",
-		"tailwindcss",
-		"terraformls",
 		"vimls",
 		"bashls",
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
-		if is_lsp_exists(lsp) then
-			lspconfig[lsp].setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-			})
-		end
+		lspconfig[lsp].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
 	end
 
 	lspconfig.gopls.setup({
