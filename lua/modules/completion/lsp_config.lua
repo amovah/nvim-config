@@ -50,10 +50,6 @@ local on_attach = function(client, bufnr)
 	require("illuminate").on_attach(client)
 end
 
-local function is_lsp_exists(lsp)
-	return os.execute("which" .. lsp) == 0
-end
-
 function M.lsp_config()
 	local lspconfig = require("lspconfig")
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -80,19 +76,17 @@ function M.lsp_config()
 		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 	})
 
-	if is_lsp_exists("yamlls") then
-		lspconfig.yamlls.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			settings = {
-				yaml = {
-					schemas = {
-						kubernetes = "globPattern",
-					},
+	lspconfig.yamlls.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = {
+			yaml = {
+				schemas = {
+					kubernetes = "globPattern",
 				},
 			},
-		})
-	end
+		},
+	})
 
 	lspconfig.lua_ls.setup({
 		on_attach = on_attach,
