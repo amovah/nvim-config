@@ -10,7 +10,7 @@ local on_attach = function(client, bufnr)
 			callback = function()
 				vim.lsp.buf.format({
 					filter = function(attached_client)
-						return attached_client.name ~= "tsserver" and attached_client.name ~= "lua_ls"
+						return attached_client.name ~= "ts_ls" and attached_client.name ~= "lua_ls"
 					end,
 					bufnr = bufnr,
 				})
@@ -55,7 +55,7 @@ function M.lsp_config()
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 	local lsp_servers = {
-		"tsserver",
+		"ts_ls",
 		"pylyzer",
 		"vimls",
 		"bashls",
