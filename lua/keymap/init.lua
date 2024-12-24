@@ -7,11 +7,6 @@ local opts = key.new_opts
 local cmd = key.cmd
 
 nmap({
-	-- packer
-	{ "<Leader>pu", cmd("PackerUpdate"), opts(noremap, silent) },
-	{ "<Leader>pi", cmd("PackerInstall"), opts(noremap, silent) },
-	{ "<Leader>pc", cmd("PackerCompile"), opts(noremap, silent) },
-	{ "<Leader>ps", cmd("PackerSync"), opts(noremap, silent) },
 	-- Telescope file file_browser
 	{
 		"<Leader>ee",
