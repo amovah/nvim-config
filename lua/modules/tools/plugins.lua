@@ -91,4 +91,7 @@ return {
 		config = conf.updater,
 		event = "BufWritePre",
 	},
+  {
+    "nvim-pack/nvim-spectre",
+  }
 }

@@ -17,3 +17,7 @@ Customization is possbile by editing `lua/config_local.lua` file which is alread
 ## Update Notifier
 
 if you clone it as git repo, you can get a notification when new update comes out.
+
+## Requirement
+
+1. [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd)

@@ -59,6 +59,7 @@ function M.lsp_config()
 		"pylyzer",
 		"vimls",
 		"bashls",
+		"tailwindcss",
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
