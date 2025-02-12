@@ -47,7 +47,6 @@ local on_attach = function(client, bufnr)
 			border = "rounded",
 		},
 	}, bufnr)
-	require("illuminate").on_attach(client)
 end
 
 function M.lsp_config()

@@ -15,7 +15,6 @@ return {
 			require("modules.completion.lsp_config").lsp_config()
 		end,
 		dependencies = {
-			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
 			"ray-x/lsp_signature.nvim",
 		},
@@ -56,5 +55,11 @@ return {
 	{
 		"j-hui/fidget.nvim",
 		config = conf.fidget,
+	},
+	{
+		"RRethy/vim-illuminate",
+		config = function()
+			require("illuminate").configure()
+		end,
 	},
 }
