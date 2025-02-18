@@ -39,7 +39,9 @@ function config.nvim_treesitter()
 end
 
 function config.nvim_treesitter_context()
-	require("treesitter-context").setup({})
+	require("treesitter-context").setup({
+		max_lines = 3,
+	})
 end
 
 function config.refactoring()
