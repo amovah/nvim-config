@@ -53,6 +53,10 @@ function M.lsp_config()
 	local lspconfig = require("lspconfig")
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+  vim.diagnostic.config({
+    virtual_text = true
+  })
+
 	local lsp_servers = {
 		"ts_ls",
 		"pylyzer",

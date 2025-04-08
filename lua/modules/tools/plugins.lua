@@ -81,16 +81,6 @@ return {
 		lazy = true,
 		cmd = { "LazyGit" },
 	},
-	{
-		dir = "~/.config/nvim/lua/updater",
-		name = "my-updater-notifier",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"rcarriga/nvim-notify",
-		},
-		config = conf.updater,
-		event = "BufWritePre",
-	},
   {
     "nvim-pack/nvim-spectre",
   }
