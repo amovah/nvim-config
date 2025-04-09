@@ -1,14 +1,15 @@
 local conf = require("modules.ui.config")
 
 return {
-	{
-		"glepnir/zephyr-nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("zephyr")
-		end,
-	},
+  { "navarasu/onedark.nvim", lazy = true },
+  { "sainnhe/edge", lazy = true },
+  { "sainnhe/sonokai", lazy = true },
+  { "sainnhe/gruvbox-material", lazy = true },
+  { "sainnhe/everforest", lazy = true },
+  { "EdenEast/nightfox.nvim", lazy = true },
+  { "catppuccin/nvim", name = "catppuccin", lazy = true },
+  { "olimorris/onedarkpro.nvim", lazy = true },
+  { "marko-cerovac/material.nvim", lazy = true },
 	{
 		"nvim-lualine/lualine.nvim",
 		config = conf.status_line,
