@@ -16,7 +16,6 @@ local none_ls = function()
 			null_ls.builtins.formatting.forge_fmt,
 			null_ls.builtins.code_actions.gomodifytags,
 		},
-		on_attach = on_attach,
 	})
 end
 

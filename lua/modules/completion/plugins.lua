@@ -25,6 +25,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvimtools/none-ls-extras.nvim",
+      "neovim/nvim-lspconfig",
 		},
 		config = function()
 			require("modules.completion.none_ls")()
