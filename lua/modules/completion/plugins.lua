@@ -12,11 +12,12 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			require("modules.completion.lsp_config").lsp_config()
+			require("modules.completion.lsp_setup")()
 		end,
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"ray-x/lsp_signature.nvim",
+      "williamboman/mason.nvim"
 		},
 	},
 	{
@@ -26,7 +27,7 @@ return {
 			"nvimtools/none-ls-extras.nvim",
 		},
 		config = function()
-			require("modules.completion.lsp_config").none_ls()
+			require("modules.completion.none_ls")()
 		end,
 	},
 	{

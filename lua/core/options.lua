@@ -1,5 +1,4 @@
 local opt = vim.opt
-local cache_dir = require("core.helper").get_cache_path()
 
 vim.g.mapleader = " "
 
@@ -10,12 +9,8 @@ opt.virtualedit = "block"
 opt.clipboard = "unnamedplus"
 opt.wildignorecase = true
 opt.swapfile = false
-opt.directory = cache_dir .. "swap/"
-opt.undodir = cache_dir .. "undo/"
-opt.backupdir = cache_dir .. "backup/"
-opt.viewdir = cache_dir .. "view/"
-opt.spellfile = cache_dir .. "spell/en.uft-8.add"
-opt.history = 2000
+
+opt.history = 1000
 opt.timeout = true
 opt.ttimeout = true
 opt.timeoutlen = 500
@@ -25,6 +20,7 @@ opt.redrawtime = 1500
 opt.ignorecase = true
 opt.smartcase = true
 opt.infercase = true
+opt.cursorline = true
 
 if vim.fn.executable("rg") == 1 then
 	opt.grepformat = "%f:%l:%c:%m,%f:%l:%m"
@@ -40,13 +36,13 @@ opt.ruler = false
 opt.showtabline = 0
 opt.winwidth = 30
 opt.pumheight = 15
-opt.showcmd = true
-opt.cmdheight = 1
-opt.laststatus = 3
+opt.showcmd = false
+
+-- opt.laststatus = 3
 -- opt.list = true
--- opt.listchars = "tab:»·,nbsp:+,trail:·,extends:→,precedes:←"
-opt.pumblend = 10
-opt.winblend = 10
+
+--eol:¬
+-- opt.listchars = "tab:» ,nbsp:+,trail:·,extends:→,precedes:←,"
 opt.undofile = true
 
 opt.smarttab = true
@@ -55,28 +51,19 @@ opt.autoindent = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 
--- wrap
-opt.linebreak = true
-opt.whichwrap = "h,l,<,>,[,],~"
-opt.breakindentopt = "shift:2,min:20"
-opt.showbreak = "↳  "
 opt.foldlevelstart = 99
-opt.foldmethod = "marker"
+
+opt.splitright = true
+opt.wrap = false
 
 opt.number = true
 opt.signcolumn = "yes"
 opt.spelloptions = "camel"
 
--- opt.textwidth = 100
-opt.colorcolumn = "100"
--- opt.conceallevel = 2
--- opt.concealcursor = 'niv'
+opt.textwidth = 100
+opt.colorcolumn = "+0"
 
-opt.relativenumber = true
--- opt.signcolumn = "yes"
-opt.cursorline = true
-
-if vim.loop.os_uname().sysname == "Darwin" then
+if vim.uv.os_uname().sysname == "Darwin" then
 	vim.g.clipboard = {
 		name = "macOS-clipboard",
 		copy = {
@@ -89,6 +76,4 @@ if vim.loop.os_uname().sysname == "Darwin" then
 		},
 		cache_enabled = 0,
 	}
-	vim.g.python_host_prog = "/usr/bin/python"
-	vim.g.python3_host_prog = "/usr/local/bin/python3"
 end

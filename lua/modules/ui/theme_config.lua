@@ -69,120 +69,121 @@ local function store_transparent(isSet)
 end
 
 local function setup_theme()
-	local theme_path = vim.fn.stdpath("data") .. "/theme"
-	if utils.file_exists(theme_path) then
-		local theme = utils.lines_from(theme_path)
-		for _, value in pairs(theme) do
-			apply_theme_config(value)
-		end
-	else
-		apply_theme_config("zephyr")
-	end
-
-	local transparent_path = vim.fn.stdpath("data") .. "/transparent"
-	if utils.file_exists(transparent_path) then
-		local theme = utils.lines_from(transparent_path)
-		for _, value in pairs(theme) do
-			apply_transparent_config(value == "true")
-		end
-	end
-
-	vim.api.nvim_create_user_command("SetTransparent", function()
-		apply_transparent_config(true)
-		store_transparent(true)
-	end, {})
-
-	vim.api.nvim_create_user_command("ChangeTheme", function(opts)
-		apply_theme_config(opts.args)
-		store_theme(opts.args)
-		apply_transparent_config(false)
-		store_transparent(false)
-	end, {
-		nargs = 1,
-		complete = function(ArgLead, _, _)
-			local themes = {
-				"codedark",
-				"material_darker",
-				"material_ligher",
-				"material_oceanic",
-				"material_palenight",
-				"material_deep ocean",
-				"nightfly",
-				"moonfly",
-				"tokyonight_storm",
-				"tokyonight_night",
-				"tokyonight_day",
-				"sonokai_default",
-				"sonokai_atlantis",
-				"sonokai_andromeda",
-				"sonokai_shusia",
-				"sonokai_maia",
-				"sonokai_espresso",
-				"OceanicNext",
-				"OceanicNextLight",
-				"edge_default",
-				"edge_aura",
-				"edge_neon",
-				"aurora",
-				"monokai_default",
-				"monokai_pro",
-				"monokai_soda",
-				"monokai_ristretto",
-				"gruvbox-material_hard",
-				"gruvbox-material_medium",
-				"gruvbox-material_soft",
-				"everforest_hard",
-				"everforest_medium",
-				"everforest_soft",
-				"doom-one",
-				"github_dark",
-				"github_dimmed",
-				"github_dark_default",
-				"github_dark_colorblind",
-				"github_light",
-				"github_light_default",
-				"github_light_colorblind",
-				"rose-pine",
-				"catppuccin_macchiato",
-				"catppuccin_latte",
-				"catppuccin_frappe",
-				"catppuccin_mocha",
-				"aquarium",
-				"nightfox",
-				"dayfox",
-				"dawnfox",
-				"duskfox",
-				"nordfox",
-				"terafox",
-				"carbonfox",
-				"vimdark",
-				"everblush",
-				"kanagawa",
-				"tokyodark",
-				"minimal",
-				"minimal-base16",
-				"adwaita",
-				"zephyr",
-				"onedark",
-				"onedark_vivid",
-				"onedark_dark",
-				"oxocarbon",
-				"ayu-dark",
-				"ayu-light",
-				"ayu-mirage",
-				"PaperColor",
-			}
-
-			local result = {}
-			for _, value in ipairs(themes) do
-				if utils.string_start_with(value, ArgLead) then
-					table.insert(result, value)
-				end
-			end
-
-			return result
-		end,
-	})
+	apply_theme_config("zephyr")
+	-- local theme_path = vim.fn.stdpath("data") .. "/theme"
+	-- if utils.file_exists(theme_path) then
+	-- 	local theme = utils.lines_from(theme_path)
+	-- 	for _, value in pairs(theme) do
+	-- 		apply_theme_config(value)
+	-- 	end
+	-- else
+	-- 	apply_theme_config("zephyr")
+	-- end
+	--
+	-- local transparent_path = vim.fn.stdpath("data") .. "/transparent"
+	-- if utils.file_exists(transparent_path) then
+	-- 	local theme = utils.lines_from(transparent_path)
+	-- 	for _, value in pairs(theme) do
+	-- 		apply_transparent_config(value == "true")
+	-- 	end
+	-- end
+	--
+	-- vim.api.nvim_create_user_command("SetTransparent", function()
+	-- 	apply_transparent_config(true)
+	-- 	store_transparent(true)
+	-- end, {})
+	--
+	-- vim.api.nvim_create_user_command("ChangeTheme", function(opts)
+	-- 	apply_theme_config(opts.args)
+	-- 	store_theme(opts.args)
+	-- 	apply_transparent_config(false)
+	-- 	store_transparent(false)
+	-- end, {
+	-- 	nargs = 1,
+	-- 	complete = function(ArgLead, _, _)
+	-- 		local themes = {
+	-- 			"codedark",
+	-- 			"material_darker",
+	-- 			"material_ligher",
+	-- 			"material_oceanic",
+	-- 			"material_palenight",
+	-- 			"material_deep ocean",
+	-- 			"nightfly",
+	-- 			"moonfly",
+	-- 			"tokyonight_storm",
+	-- 			"tokyonight_night",
+	-- 			"tokyonight_day",
+	-- 			"sonokai_default",
+	-- 			"sonokai_atlantis",
+	-- 			"sonokai_andromeda",
+	-- 			"sonokai_shusia",
+	-- 			"sonokai_maia",
+	-- 			"sonokai_espresso",
+	-- 			"OceanicNext",
+	-- 			"OceanicNextLight",
+	-- 			"edge_default",
+	-- 			"edge_aura",
+	-- 			"edge_neon",
+	-- 			"aurora",
+	-- 			"monokai_default",
+	-- 			"monokai_pro",
+	-- 			"monokai_soda",
+	-- 			"monokai_ristretto",
+	-- 			"gruvbox-material_hard",
+	-- 			"gruvbox-material_medium",
+	-- 			"gruvbox-material_soft",
+	-- 			"everforest_hard",
+	-- 			"everforest_medium",
+	-- 			"everforest_soft",
+	-- 			"doom-one",
+	-- 			"github_dark",
+	-- 			"github_dimmed",
+	-- 			"github_dark_default",
+	-- 			"github_dark_colorblind",
+	-- 			"github_light",
+	-- 			"github_light_default",
+	-- 			"github_light_colorblind",
+	-- 			"rose-pine",
+	-- 			"catppuccin_macchiato",
+	-- 			"catppuccin_latte",
+	-- 			"catppuccin_frappe",
+	-- 			"catppuccin_mocha",
+	-- 			"aquarium",
+	-- 			"nightfox",
+	-- 			"dayfox",
+	-- 			"dawnfox",
+	-- 			"duskfox",
+	-- 			"nordfox",
+	-- 			"terafox",
+	-- 			"carbonfox",
+	-- 			"vimdark",
+	-- 			"everblush",
+	-- 			"kanagawa",
+	-- 			"tokyodark",
+	-- 			"minimal",
+	-- 			"minimal-base16",
+	-- 			"adwaita",
+	-- 			"zephyr",
+	-- 			"onedark",
+	-- 			"onedark_vivid",
+	-- 			"onedark_dark",
+	-- 			"oxocarbon",
+	-- 			"ayu-dark",
+	-- 			"ayu-light",
+	-- 			"ayu-mirage",
+	-- 			"PaperColor",
+	-- 		}
+	--
+	-- 		local result = {}
+	-- 		for _, value in ipairs(themes) do
+	-- 			if utils.string_start_with(value, ArgLead) then
+	-- 				table.insert(result, value)
+	-- 			end
+	-- 		end
+	--
+	-- 		return result
+	-- 	end,
+	-- })
 end
 
 return setup_theme
