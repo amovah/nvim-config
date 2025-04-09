@@ -22,6 +22,8 @@ opt.smartcase = true
 opt.infercase = true
 opt.cursorline = true
 
+opt.relativenumber = true
+
 if vim.fn.executable("rg") == 1 then
 	opt.grepformat = "%f:%l:%c:%m,%f:%l:%m"
 	opt.grepprg = "rg --vimgrep --no-heading --smart-case"
