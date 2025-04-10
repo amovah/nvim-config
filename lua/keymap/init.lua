@@ -60,7 +60,7 @@ nmap({
 	{ "<Leader>fr", cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ "<Leader>fd", cmd([[lua require('telescope.builtin').diagnostics()]]), opts(noremap, silent) },
 	{ "<Leader>ft", cmd([[Telescope]]), opts(noremap, silent) },
-	{ "<Leader>fp", cmd("Telescope neoclip"), opts(noremap, silent) },
+	{ "<Leader>fp", cmd([[lua require("telescope").extensions.yank_history.yank_history()]]), opts(noremap, silent) },
 	{ "<Leader>fh", cmd([[lua require('telescope.builtin').help_tags()]]), opts(noremap, silent) },
 	-- Buffer
 	{ "]b", cmd("BufferLineCycleNext"), opts(noremap, silent) },
@@ -91,6 +91,11 @@ nmap({
 	{ "<Leader>S", cmd([[lua require("spectre").toggle()]]), opts(noremap, silent) },
 	{ "<Leader>sw", cmd([[lua require("spectre").open_visual({select_word=true})]]), opts(noremap, silent) },
 	{ "<Leader>sp", cmd([[lua require("spectre").open_file_search({select_word=true})]]), opts(noremap, silent) },
+	-- yanky
+	{ "p", [[<Plug>(YankyPutAfter)]], opts(noremap, silent) },
+	{ "P", [[<Plug>(YankyPutBefore)]], opts(noremap, silent) },
+	{ "[y", [[<Plug>(YankyPreviousEntry)]], opts(noremap) },
+	{ "]y", [[<Plug>(YankyNextEntry)]], opts(noremap) },
 })
 
 vmap({

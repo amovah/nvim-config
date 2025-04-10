@@ -49,10 +49,6 @@ return {
 		lazy = true,
 	},
 	{
-		"AckslD/nvim-neoclip.lua",
-		config = conf.neoclip,
-	},
-	{
 		"mbbill/undotree",
 		lazy = true,
 		cmd = "UndotreeToggle",
@@ -81,7 +77,14 @@ return {
 		lazy = true,
 		cmd = { "LazyGit" },
 	},
-  {
-    "nvim-pack/nvim-spectre",
-  }
+	{
+		"nvim-pack/nvim-spectre",
+	},
+	{
+		"gbprod/yanky.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+		config = conf.yanky,
+	},
 }

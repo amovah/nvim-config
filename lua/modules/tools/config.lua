@@ -47,19 +47,6 @@ function config.colorizer()
 	require("colorizer").setup({})
 end
 
-function config.neoclip()
-	require("neoclip").setup({
-		keys = {
-			telescope = {
-				i = {
-					paste = "<cr>",
-				},
-			},
-		},
-	})
-	require("telescope").load_extension("neoclip")
-end
-
 function config.git_conflict()
 	require("git-conflict").setup({})
 end
@@ -70,6 +57,21 @@ end
 
 function config.updater()
 	require("updater").setup()
+end
+
+function config.yanky()
+	require("yanky").setup({
+		preserve_cursor_position = {
+			enabled = true,
+		},
+		highlight = {
+			on_put = true,
+			on_yank = true,
+			timer = 300,
+		},
+	})
+
+	require("telescope").load_extension("yank_history")
 end
 
 return config
