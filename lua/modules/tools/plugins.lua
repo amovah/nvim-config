@@ -39,21 +39,6 @@ return {
 		config = conf.colorizer,
 	},
 	{
-		"iamcco/markdown-preview.nvim",
-		build = "cd app && npm ci",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-		cmd = { "MarkdownPreview" },
-		lazy = true,
-	},
-	{
-		"mbbill/undotree",
-		lazy = true,
-		cmd = "UndotreeToggle",
-	},
-	{
 		"akinsho/git-conflict.nvim",
 		cmd = {
 			"GitConflictListQf",
