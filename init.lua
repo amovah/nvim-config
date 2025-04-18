@@ -8,4 +8,4 @@ utils.is_compatible_version(expected_version)
 
 require("globals")
 require("core")
-require("modules.ui.theme_config").colorscheme_conf.sonokai()
+require("modules.ui.theme_config").colorscheme_conf.gruvbox_material()
