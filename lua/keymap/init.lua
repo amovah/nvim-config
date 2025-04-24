@@ -96,6 +96,10 @@ nmap({
 	{ "P", [[<Plug>(YankyPutBefore)]], opts(noremap, silent) },
 	{ "[y", [[<Plug>(YankyPreviousEntry)]], opts(noremap) },
 	{ "]y", [[<Plug>(YankyNextEntry)]], opts(noremap) },
+	{ "<Leader>ha", cmd([[lua require("harpoon.mark").add_file()]]), opts(noremap, silent) },
+	{ "<Leader>hm", cmd([[lua require("harpoon.ui").toggle_quick_menu()]]), opts(noremap, silent) },
+	{ "<Tab>", cmd([[lua require("harpoon.ui").nav_next()]]), opts(noremap, silent) },
+	{ "<S-Tab>", cmd([[lua require("harpoon.ui").nav_prev()]]), opts(noremap, silent) },
 })
 
 vmap({

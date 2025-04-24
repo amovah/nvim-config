@@ -74,4 +74,9 @@ function config.yanky()
 	require("telescope").load_extension("yank_history")
 end
 
+function config.harpoon()
+	require("harpoon").setup({})
+	require("telescope").load_extension("harpoon")
+end
+
 return config

@@ -72,4 +72,12 @@ return {
 		},
 		config = conf.yanky,
 	},
+	{
+		"ThePrimeagen/harpoon",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		config = conf.harpoon,
+	},
 }
