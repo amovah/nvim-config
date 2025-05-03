@@ -3,7 +3,7 @@ local cmp_config = function()
 	local lspkind = require("lspkind")
 
 	cmp.setup({
-		preselect = cmp.PreselectMode.Item,
+		preselect = cmp.PreselectMode.First,
 		window = {
 			completion = cmp.config.window.bordered(),
 			documentation = cmp.config.window.bordered(),
