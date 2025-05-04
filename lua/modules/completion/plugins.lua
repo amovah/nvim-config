@@ -17,7 +17,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"ray-x/lsp_signature.nvim",
-      "williamboman/mason.nvim"
+			"williamboman/mason.nvim",
 		},
 	},
 	{
@@ -25,7 +25,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvimtools/none-ls-extras.nvim",
-      "neovim/nvim-lspconfig",
+			"neovim/nvim-lspconfig",
 		},
 		config = function()
 			require("modules.completion.none_ls")()
@@ -34,6 +34,7 @@ return {
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
+			"neovim/nvim-lspconfig",
 			"onsails/lspkind.nvim",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
