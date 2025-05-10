@@ -22,7 +22,6 @@ function lazyman.load()
 	require("lazy").setup({
 		concurrency = 5,
 		spec = {
-			{ import = "modules.completion.plugins" },
 			{ import = "modules.lang.plugins" },
 			{ import = "modules.tools.plugins" },
 			{ import = "modules.ui.plugins" },

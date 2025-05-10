@@ -43,10 +43,6 @@ function config.comment()
 	require("Comment").setup({})
 end
 
-function config.colorizer()
-	require("colorizer").setup({})
-end
-
 function config.git_conflict()
 	require("git-conflict").setup({})
 end

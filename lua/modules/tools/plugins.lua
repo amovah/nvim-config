@@ -36,8 +36,16 @@ return {
 		"mg979/vim-visual-multi",
 	},
 	{
-		"norcalli/nvim-colorizer.lua",
-		config = conf.colorizer,
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		opts = { -- set to setup table
+			user_default_options = {
+				tailwind = "both", -- Enable tailwind colors
+				tailwind_opts = { -- Options for highlighting tailwind names
+					update_names = true, -- When using tailwind = 'both', update tailwind names from LSP results.  See tailwind section
+				},
+			},
+		},
 	},
 	{
 		"akinsho/git-conflict.nvim",
