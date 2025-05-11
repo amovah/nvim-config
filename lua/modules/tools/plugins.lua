@@ -3,7 +3,6 @@ local conf = require("modules.tools.config")
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
 		config = conf.telescope,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
