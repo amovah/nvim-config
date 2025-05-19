@@ -108,6 +108,7 @@ return {
     config = function()
       require("illuminate").configure()
     end,
+    enabled = false,
   },
   {
     "nvim-treesitter/nvim-treesitter",
