@@ -25,8 +25,8 @@ opt.cursorline = true
 opt.relativenumber = true
 
 if vim.fn.executable("rg") == 1 then
-	opt.grepformat = "%f:%l:%c:%m,%f:%l:%m"
-	opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+  opt.grepformat = "%f:%l:%c:%m,%f:%l:%m"
+  opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 end
 
 opt.completeopt = "menu,menuone,noselect"
@@ -56,7 +56,7 @@ opt.shiftwidth = 2
 opt.foldlevelstart = 99
 
 opt.splitright = true
-opt.wrap = false
+opt.wrap = true
 
 opt.number = true
 opt.signcolumn = "yes"
@@ -66,16 +66,16 @@ opt.textwidth = 100
 opt.colorcolumn = "+0"
 
 if vim.uv.os_uname().sysname == "Darwin" then
-	vim.g.clipboard = {
-		name = "macOS-clipboard",
-		copy = {
-			["+"] = "pbcopy",
-			["*"] = "pbcopy",
-		},
-		paste = {
-			["+"] = "pbpaste",
-			["*"] = "pbpaste",
-		},
-		cache_enabled = 0,
-	}
+  vim.g.clipboard = {
+    name = "macOS-clipboard",
+    copy = {
+      ["+"] = "pbcopy",
+      ["*"] = "pbcopy",
+    },
+    paste = {
+      ["+"] = "pbpaste",
+      ["*"] = "pbpaste",
+    },
+    cache_enabled = 0,
+  }
 end
