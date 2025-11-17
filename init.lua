@@ -8,4 +8,4 @@ local utils = require("utils")
 
 require("globals")
 require("core")
-require("modules.ui.theme_config").colorscheme_conf.sonokai()
+require("modules.ui.theme_config").colorscheme_conf.everforest()

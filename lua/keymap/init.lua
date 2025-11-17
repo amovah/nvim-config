@@ -32,7 +32,8 @@ nmap({
 	},
 	-- LSP
 	{ "gd", vim.lsp.buf.definition, opts(noremap, silent) },
-	-- { 'gd', cmd('Lspsaga preview_definition'), opts(noremap, silent) },
+	{ "gi", vim.lsp.buf.implementation, opts(noremap, silent) },
+	-- { "gd", cmd("Lspsaga preview_definition"), opts(noremap, silent) },
 	{ "gr", cmd([[lua require('telescope.builtin').lsp_references()]]), opts(noremap, silent) },
 	{ "[e", cmd("Lspsaga diagnostic_jump_prev"), opts(noremap, silent) },
 	{ "]e", cmd("Lspsaga diagnostic_jump_next"), opts(noremap, silent) },
