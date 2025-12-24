@@ -111,8 +111,8 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    event = "BufRead",
-    run = ":TSUpdate",
+    lazy = false,
+    build = ":TSUpdate",
     config = conf.nvim_treesitter,
     dependencies = {
       "nvim-telescope/telescope.nvim",
