@@ -111,20 +111,44 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = "BufRead",
-		run = ":TSUpdate",
+		lazy = false,
+		build = ":TSUpdate",
+		branch = "main",
 		config = conf.nvim_treesitter,
-		branch = "master",
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
-			"nvim-treesitter/nvim-treesitter-textobjects",
-			"windwp/nvim-ts-autotag",
-			"andymass/vim-matchup",
 		},
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		config = conf.nvim_treesitter_context,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		branch = "main",
+		lazy = false,
+		config = conf.nvim_treesitter_textobjects,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		config = conf.nvim_treesitter_autotag,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+	{
+		"andymass/vim-matchup",
+		opts = {
+			treesitter = {
+				stopline = 500,
+			},
+		},
 	},
 	{
 		"ThePrimeagen/refactoring.nvim",
