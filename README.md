@@ -1,3 +1,7 @@
+***ARCHIVED. I'm using [https://www.lazyvim.org](LazyVim)***
+
+
+
 my custom nvim config. inspired by cosynvim by gelpnier.
 
 There is couple options which worth to mention:
